@@ -1,24 +1,25 @@
 #!/usr/bin/env node
 
 /**
- * Puppeteer Game Loading Test
+ * Puppeteer Game Loading Test (FIXED VERSION with ENHANCED CLICK STRATEGY)
  *
- * This script uses a real browser (Chromium) to test game loading
- * and captures ALL network requests including:
- * - HTML, CSS, JavaScript
- * - Images, Audio, Fonts
- * - Dynamically loaded resources
- * - WebGL initialization
- * - Game engine startup
+ * Key improvements:
+ * 1. Accurate response size using CDP getResponseBody
+ * 2. Fixed requestCount tracking logic
+ * 3. Better error handling with counters
+ * 4. Enhanced multi-strategy click detection for Canvas-based games
+ * 5. Resource loading waterfall tracking
  *
- * Usage:
- *   node puppeteer_game_test.js <game_url>
+ * Enhanced Click Strategy:
+ * - Strategy 1: Multi-position canvas click (center, center-lower, lower-center, center-upper)
+ * - Strategy 2: Multiple rapid clicks (3x at center-lower position)
+ * - Strategy 3: HTML overlay buttons (rare cases)
+ * - Each strategy validates success by monitoring new resource loading
  */
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-// Colors for terminal output
 const colors = {
     reset: '\x1b[0m',
     bright: '\x1b[1m',
@@ -66,7 +67,7 @@ async function testGameLoading(gameUrl, options = {}) {
     } = options;
 
     console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
-    console.log(`${colors.cyan}  Puppeteer Game Loading Test${colors.reset}`);
+    console.log(`${colors.cyan}  Puppeteer Game Loading Test (FIXED)${colors.reset}`);
     console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
     console.log('');
     console.log(`${colors.yellow}Game URL:${colors.reset}`);
@@ -78,9 +79,9 @@ async function testGameLoading(gameUrl, options = {}) {
     console.log(`  Wait for network idle: ${waitForIdle}ms`);
     console.log('');
 
-    const requests = [];
     const responses = [];
     const failedRequests = [];
+    const skippedResponses = [];
     let startTime = null;
 
     console.log(`${colors.cyan}Launching browser...${colors.reset}`);
@@ -115,42 +116,66 @@ async function testGameLoading(gameUrl, options = {}) {
         // Disable cache
         await page.setCacheEnabled(false);
 
-        // Listen to all network requests
-        page.on('request', request => {
-            requests.push({
-                url: request.url(),
-                method: request.method(),
-                resourceType: request.resourceType(),
-                time: Date.now()
+        // Enable Chrome DevTools Protocol for accurate size tracking
+        const client = await page.target().createCDPSession();
+        await client.send('Network.enable');
+
+        // Track requests using CDP for accurate size
+        const requestIdMap = new Map();
+
+        client.on('Network.requestWillBeSent', event => {
+            requestIdMap.set(event.requestId, {
+                url: event.request.url,
+                method: event.request.method,
+                startTime: event.timestamp * 1000,
+                type: event.type
             });
         });
 
-        // Listen to all network responses
-        page.on('response', async response => {
-            const request = response.request();
-            const timing = response.timing();
+        client.on('Network.responseReceived', async event => {
+            const request = requestIdMap.get(event.requestId);
+            if (!request) return;
 
             try {
-                const headers = response.headers();
+                // Get actual response body to calculate real size
+                const responseBody = await client.send('Network.getResponseBody', {
+                    requestId: event.requestId
+                }).catch(() => null);
+
+                let actualSize = 0;
+                if (responseBody) {
+                    actualSize = Buffer.byteLength(
+                        responseBody.body,
+                        responseBody.base64Encoded ? 'base64' : 'utf8'
+                    );
+                } else {
+                    // Fallback to encodedDataLength from CDP
+                    actualSize = event.response.encodedDataLength || 0;
+                }
+
                 responses.push({
-                    url: response.url(),
-                    status: response.status(),
-                    resourceType: getResourceType(response.url()),
-                    size: parseInt(headers['content-length'] || 0),
+                    url: event.response.url,
+                    status: event.response.status,
+                    resourceType: getResourceType(event.response.url),
+                    size: actualSize,
+                    encodedSize: event.response.encodedDataLength || 0,
                     time: Date.now(),
-                    timing: timing,
-                    mimeType: headers['content-type'] || 'unknown'
+                    timing: event.response.timing,
+                    mimeType: event.response.mimeType || 'unknown',
+                    fromCache: event.response.fromDiskCache || event.response.fromServiceWorker || false
                 });
             } catch (error) {
-                // Some responses might fail to get headers
+                skippedResponses.push({
+                    url: event.response.url,
+                    error: error.message
+                });
             }
         });
 
-        // Listen to failed requests
-        page.on('requestfailed', request => {
+        client.on('Network.loadingFailed', event => {
             failedRequests.push({
-                url: request.url(),
-                failure: request.failure(),
+                url: event.documentURL || 'unknown',
+                error: event.errorText,
                 time: Date.now()
             });
         });
@@ -162,27 +187,17 @@ async function testGameLoading(gameUrl, options = {}) {
                 const type = msg.type();
                 const text = msg.text();
                 if (type === 'error') {
-                    // Track WebGL errors but don't spam the console
                     if (text.toLowerCase().includes('webgl') || text.includes('JSHandle@error')) {
                         webglErrors.push(text);
                         if (webglErrors.length === 1) {
-                            console.log(`${colors.yellow}[Note]${colors.reset} WebGL errors detected (common in headless mode, won't affect resource loading)`);
+                            console.log(`${colors.yellow}[Note]${colors.reset} WebGL errors detected (common in headless mode)`);
                         }
                     } else {
-                        console.log(`${colors.red}[Browser Console Error]${colors.reset} ${text}`);
+                        console.log(`${colors.red}[Browser Error]${colors.reset} ${text}`);
                     }
                 }
             });
         }
-
-        // Listen to page errors
-        page.on('pageerror', error => {
-            const msg = error.message;
-            // Ignore WebGL-related errors
-            if (!msg.includes('getParameter') && !msg.includes('webgl')) {
-                console.log(`${colors.red}[Page Error]${colors.reset} ${msg}`);
-            }
-        });
 
         console.log(`${colors.cyan}Navigating to game...${colors.reset}`);
         console.log('');
@@ -199,126 +214,246 @@ async function testGameLoading(gameUrl, options = {}) {
         console.log(`${colors.green}✓${colors.reset} Page navigation complete: ${formatTime(navigationTime - startTime)}`);
         console.log('');
 
-        // Try to click "CLICK TO PLAY" or similar buttons
-        console.log(`${colors.cyan}Looking for game start button...${colors.reset}`);
+        // Enhanced Click Strategy - Try multiple approaches
+        console.log(`${colors.cyan}Looking for game start button (Enhanced Strategy)...${colors.reset}`);
         const beforeClickRequests = responses.length;
 
         try {
-            // Wait a bit for the page to be ready
+            // Wait for page to be ready
             await new Promise(resolve => setTimeout(resolve, 3000));
 
-            // Try to find and click common game start buttons
-            const clicked = await page.evaluate(() => {
-                // Common button selectors and text patterns
-                const patterns = [
-                    'CLICK TO PLAY',
-                    'START',
-                    'PLAY',
-                    '開始',
-                    '播放',
-                    'TAP TO START'
-                ];
+            // Strategy 1: Try multiple canvas positions with validation
+            console.log(`  ${colors.cyan}Strategy 1: Multi-position canvas click${colors.reset}`);
 
-                // Try to find by text content
-                const allElements = document.querySelectorAll('*');
-                for (const el of allElements) {
-                    const text = el.textContent?.trim().toUpperCase();
-                    if (text && patterns.some(p => text.includes(p.toUpperCase()))) {
-                        // Check if element is clickable
-                        const style = window.getComputedStyle(el);
-                        if (style.display !== 'none' && style.visibility !== 'hidden') {
-                            el.click();
-                            return true;
+            const positions = [
+                { name: 'center', x: 0.5, y: 0.5 },
+                { name: 'center-lower', x: 0.5, y: 0.6 },
+                { name: 'lower-center', x: 0.5, y: 0.7 },
+                { name: 'center-upper', x: 0.5, y: 0.4 },
+            ];
+
+            let clickSuccessful = false;
+            let successInfo = null;
+
+            for (const pos of positions) {
+                const clicked = await page.evaluate(({ posX, posY }) => {
+                    const canvas = document.querySelector('canvas');
+                    if (!canvas) return { success: false, reason: 'No canvas found' };
+
+                    const rect = canvas.getBoundingClientRect();
+                    const x = rect.left + rect.width * posX;
+                    const y = rect.top + rect.height * posY;
+
+                    // Dispatch multiple event types for compatibility
+                    const events = [
+                        new MouseEvent('mousedown', { clientX: x, clientY: y, bubbles: true }),
+                        new MouseEvent('mouseup', { clientX: x, clientY: y, bubbles: true }),
+                        new MouseEvent('click', { clientX: x, clientY: y, bubbles: true }),
+                        new PointerEvent('pointerdown', { clientX: x, clientY: y, bubbles: true }),
+                        new PointerEvent('pointerup', { clientX: x, clientY: y, bubbles: true }),
+                    ];
+
+                    events.forEach(event => canvas.dispatchEvent(event));
+
+                    return {
+                        success: true,
+                        position: { x: Math.round(x), y: Math.round(y) },
+                        canvasSize: { width: rect.width, height: rect.height }
+                    };
+                }, { posX: pos.x, posY: pos.y });
+
+                if (!clicked.success) {
+                    console.log(`    ${colors.yellow}⚠${colors.reset} ${pos.name}: ${clicked.reason}`);
+                    continue;
+                }
+
+                console.log(`    → ${pos.name} (${(pos.x * 100)}%, ${(pos.y * 100)}%) at pixel (${clicked.position.x}, ${clicked.position.y})`);
+
+                // Wait and check if resources started loading
+                await new Promise(resolve => setTimeout(resolve, 2000));
+
+                const newResourceCount = responses.length - beforeClickRequests;
+
+                if (newResourceCount > 5) {
+                    console.log(`    ${colors.green}✓${colors.reset} Success! ${newResourceCount} new resources detected`);
+                    clickSuccessful = true;
+                    successInfo = { strategy: 'multi-position', position: pos.name, resources: newResourceCount };
+                    break;
+                } else {
+                    console.log(`    ${colors.yellow}⚠${colors.reset} Only ${newResourceCount} new resources, trying next...`);
+                }
+            }
+
+            // Strategy 2: Multiple rapid clicks if Strategy 1 failed
+            if (!clickSuccessful) {
+                console.log(`  ${colors.cyan}Strategy 2: Multiple rapid clicks${colors.reset}`);
+
+                await page.evaluate(() => {
+                    const canvas = document.querySelector('canvas');
+                    if (!canvas) return;
+
+                    const rect = canvas.getBoundingClientRect();
+                    const x = rect.left + rect.width * 0.5;
+                    const y = rect.top + rect.height * 0.6;
+
+                    // Click 3 times rapidly
+                    for (let i = 0; i < 3; i++) {
+                        ['mousedown', 'mouseup', 'click', 'pointerdown', 'pointerup'].forEach(type => {
+                            const event = type.startsWith('pointer')
+                                ? new PointerEvent(type, { clientX: x, clientY: y, bubbles: true })
+                                : new MouseEvent(type, { clientX: x, clientY: y, bubbles: true });
+                            canvas.dispatchEvent(event);
+                        });
+                    }
+                });
+
+                console.log(`    → Triple-clicked at center-lower position`);
+
+                await new Promise(resolve => setTimeout(resolve, 3000));
+
+                const newResourceCount = responses.length - beforeClickRequests;
+
+                if (newResourceCount > 5) {
+                    console.log(`    ${colors.green}✓${colors.reset} Success! ${newResourceCount} new resources detected`);
+                    clickSuccessful = true;
+                    successInfo = { strategy: 'rapid-clicks', resources: newResourceCount };
+                }
+            }
+
+            // Strategy 3: HTML overlay buttons (rare)
+            if (!clickSuccessful) {
+                console.log(`  ${colors.cyan}Strategy 3: HTML overlay buttons${colors.reset}`);
+
+                const htmlClick = await page.evaluate(() => {
+                    const patterns = ['CLICK TO PLAY', 'START', 'PLAY', '開始', 'TAP TO START'];
+
+                    // Try buttons
+                    const buttons = document.querySelectorAll('button, [role="button"], .button, .btn');
+                    for (const btn of buttons) {
+                        const text = btn.textContent?.trim().toUpperCase() || '';
+                        if (patterns.some(p => text.includes(p))) {
+                            const style = window.getComputedStyle(btn);
+                            if (style.display !== 'none' && style.visibility !== 'hidden') {
+                                btn.click();
+                                return { success: true, type: 'button', text: btn.textContent };
+                            }
                         }
                     }
+
+                    // Try any clickable element
+                    const allElements = document.querySelectorAll('div, span, a, img');
+                    for (const el of allElements) {
+                        const text = el.textContent?.trim().toUpperCase() || '';
+                        const alt = el.getAttribute('alt')?.toUpperCase() || '';
+
+                        if (patterns.some(p => text.includes(p) || alt.includes(p))) {
+                            const style = window.getComputedStyle(el);
+                            const rect = el.getBoundingClientRect();
+
+                            if (style.display !== 'none' &&
+                                style.visibility !== 'hidden' &&
+                                style.opacity !== '0' &&
+                                rect.width > 0 && rect.height > 0) {
+                                el.click();
+                                return { success: true, type: el.tagName.toLowerCase(), text: text || alt };
+                            }
+                        }
+                    }
+
+                    return { success: false };
+                });
+
+                if (htmlClick.success) {
+                    console.log(`    ${colors.green}✓${colors.reset} Found HTML ${htmlClick.type}: "${htmlClick.text}"`);
+
+                    await new Promise(resolve => setTimeout(resolve, 3000));
+
+                    const newResourceCount = responses.length - beforeClickRequests;
+                    if (newResourceCount > 0) {
+                        clickSuccessful = true;
+                        successInfo = { strategy: 'html-button', element: htmlClick.type, resources: newResourceCount };
+                    }
                 }
+            }
 
-                // Try to find canvas and click it (some games start on canvas click)
-                const canvas = document.querySelector('canvas');
-                if (canvas) {
-                    canvas.click();
-                    return true;
-                }
+            // Final assessment
+            const totalNewResources = responses.length - beforeClickRequests;
 
-                return false;
-            });
-
-            if (clicked) {
-                console.log(`  ${colors.green}✓${colors.reset} Game start button clicked`);
-                console.log(`  ${colors.yellow}Waiting for game to start and load additional resources...${colors.reset}`);
-
-                // Wait for resources triggered by the click to start loading
-                await new Promise(resolve => setTimeout(resolve, 5000));
-
-                const afterClickRequests = responses.length;
-                const newRequests = afterClickRequests - beforeClickRequests;
-                console.log(`  ${colors.cyan}${newRequests} new resources loaded after clicking start${colors.reset}`);
+            if (clickSuccessful && successInfo) {
+                console.log('');
+                console.log(`  ${colors.green}✓ Click successful using ${successInfo.strategy}${colors.reset}`);
+                console.log(`  ${colors.cyan}${totalNewResources} new resources loaded after clicking${colors.reset}`);
+                console.log('');
+            } else if (totalNewResources > 0) {
+                console.log('');
+                console.log(`  ${colors.yellow}⚠ Uncertain: ${totalNewResources} resources loaded (game may auto-start)${colors.reset}`);
                 console.log('');
             } else {
-                console.log(`  ${colors.yellow}⚠${colors.reset} No start button found (game may auto-start)`);
+                console.log('');
+                console.log(`  ${colors.yellow}⚠ No click response detected (game may not require click)${colors.reset}`);
                 console.log('');
             }
+
         } catch (error) {
-            console.log(`  ${colors.yellow}⚠${colors.reset} Could not interact with page: ${error.message}`);
+            console.log(`  ${colors.red}✗${colors.reset} Click error: ${error.message}`);
             console.log('');
         }
 
-        // Wait for game to be ready - monitor until network settles and game UI is ready
-        console.log(`${colors.cyan}Waiting for game to load and become ready...${colors.reset}`);
+        // Wait for game to be ready - FIXED tracking logic
+        console.log(`${colors.cyan}Waiting for game to fully load...${colors.reset}`);
 
         let lastRequestTime = Date.now();
-        let requestCount = responses.length;
-        const maxWaitTime = Math.max(waitForIdle, 60000); // At least 60 seconds max
-        const idleThreshold = 5000; // 5 seconds with no new requests (increased from 2s)
+        const maxWaitTime = Math.max(waitForIdle, 60000);
+        const idleThreshold = 5000;
         const startWaitTime = Date.now();
 
-        // Update last request time tracking
-        const requestTimeTracker = setInterval(() => {
-            if (responses.length > requestCount) {
-                lastRequestTime = Date.now();
-                requestCount = responses.length;
-            }
-        }, 100);
+        // Snapshot of count at start of idle detection
+        let snapshotCount = responses.length;
 
         while (Date.now() - startWaitTime < maxWaitTime) {
+            // Update last request time if new responses arrived
+            if (responses.length > snapshotCount) {
+                lastRequestTime = Date.now();
+                snapshotCount = responses.length;
+            }
+
             const idleTime = Date.now() - lastRequestTime;
             const elapsed = Date.now() - startWaitTime;
 
-            // Check if game is ready (network mostly idle)
-            // Wait for at least 15 seconds AND network idle for 5 seconds
+            // Check if ready (at least 15s elapsed AND 5s idle)
             if (elapsed >= 15000 && idleTime >= idleThreshold && responses.length > 20) {
-                // Give extra time for any final lazy-loaded resources
                 console.log('');
-                console.log(`  ${colors.yellow}Network appears idle, waiting 5 more seconds to ensure all resources loaded...${colors.reset}`);
-                await new Promise(resolve => setTimeout(resolve, 5000));
+                console.log(`  ${colors.yellow}Network idle detected, verifying...${colors.reset}`);
 
-                // Check if any new resources arrived during the wait
-                if (responses.length > requestCount) {
-                    console.log(`  ${colors.yellow}New resources detected (${responses.length - requestCount}), continuing to monitor...${colors.reset}`);
+                const beforeVerify = responses.length;
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                const afterVerify = responses.length;
+
+                if (afterVerify > beforeVerify) {
+                    console.log(`  ${colors.yellow}${afterVerify - beforeVerify} more resources detected, continuing...${colors.reset}`);
+                    snapshotCount = afterVerify;
                     lastRequestTime = Date.now();
-                    requestCount = responses.length;
                     continue;
                 }
+
+                console.log(`  ${colors.green}✓${colors.reset} Verified - no new resources`);
                 break;
             }
 
-            // Progress indicator every 2 seconds
+            // Progress indicator
             if (Math.floor(elapsed / 2000) !== Math.floor((elapsed - 500) / 2000)) {
-                process.stdout.write(`\r  ${formatTime(elapsed)} elapsed | ${responses.length} resources loaded | ${formatTime(idleTime)} since last request`);
+                process.stdout.write(`\r  ${formatTime(elapsed)} | ${responses.length} resources | ${formatTime(idleTime)} idle`);
             }
 
             await new Promise(resolve => setTimeout(resolve, 500));
         }
 
-        clearInterval(requestTimeTracker);
         console.log('');
         console.log(`${colors.green}✓${colors.reset} Game loading complete`);
+        console.log('');
 
         const finalTime = Date.now();
         const totalTime = finalTime - startTime;
-
-        console.log(`${colors.green}✓${colors.reset} All resources loaded`);
-        console.log('');
 
         // Analyze the results
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
@@ -329,6 +464,8 @@ async function testGameLoading(gameUrl, options = {}) {
         // Group by resource type
         const byType = {};
         let totalSize = 0;
+        let totalEncodedSize = 0;
+        let fromCacheCount = 0;
 
         responses.forEach(resp => {
             const type = resp.resourceType;
@@ -336,17 +473,21 @@ async function testGameLoading(gameUrl, options = {}) {
                 byType[type] = {
                     count: 0,
                     size: 0,
+                    encodedSize: 0,
                     urls: []
                 };
             }
             byType[type].count++;
             byType[type].size += resp.size;
+            byType[type].encodedSize += resp.encodedSize;
             byType[type].urls.push({
                 url: resp.url,
                 size: resp.size,
                 status: resp.status
             });
             totalSize += resp.size;
+            totalEncodedSize += resp.encodedSize;
+            if (resp.fromCache) fromCacheCount++;
         });
 
         // Display by resource type
@@ -364,13 +505,15 @@ async function testGameLoading(gameUrl, options = {}) {
         console.log('');
         console.log(`  ${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
         console.log(`  ${colors.bright}Total:${colors.reset}       ${String(responses.length).padStart(3)} files | ${formatBytes(totalSize).padStart(12)}`);
+        console.log(`  ${colors.cyan}Transferred:${colors.reset} ${formatBytes(totalEncodedSize).padStart(12)} (after compression)`);
+        console.log(`  ${colors.cyan}From cache:${colors.reset}  ${fromCacheCount} resources`);
         console.log('');
 
         // Timeline
         console.log(`${colors.yellow}Loading Timeline:${colors.reset}`);
         console.log('');
         console.log(`  Navigation to networkidle2:  ${formatTime(navigationTime - startTime)}`);
-        console.log(`  Additional wait time:        ${formatTime(waitForIdle)}`);
+        console.log(`  Additional loading time:     ${formatTime(finalTime - navigationTime)}`);
         console.log(`  ${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
         console.log(`  ${colors.bright}Total loading time:${colors.reset}          ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
         console.log('');
@@ -379,10 +522,19 @@ async function testGameLoading(gameUrl, options = {}) {
         if (failedRequests.length > 0) {
             console.log(`${colors.red}Failed Requests: ${failedRequests.length}${colors.reset}`);
             console.log('');
-            failedRequests.forEach(req => {
+            failedRequests.slice(0, 10).forEach(req => {
                 console.log(`  ${colors.red}✗${colors.reset} ${req.url}`);
-                console.log(`    Reason: ${req.failure.errorText}`);
+                console.log(`    Error: ${req.error}`);
             });
+            if (failedRequests.length > 10) {
+                console.log(`  ... and ${failedRequests.length - 10} more`);
+            }
+            console.log('');
+        }
+
+        // Skipped responses (for debugging)
+        if (skippedResponses.length > 0 && verbose) {
+            console.log(`${colors.yellow}Skipped Responses: ${skippedResponses.length}${colors.reset}`);
             console.log('');
         }
 
@@ -407,9 +559,19 @@ async function testGameLoading(gameUrl, options = {}) {
                 navigationTime: navigationTime - startTime,
                 totalRequests: responses.length,
                 totalSize: totalSize,
+                totalEncodedSize: totalEncodedSize,
+                fromCacheCount: fromCacheCount,
                 failedRequests: failedRequests.length,
+                skippedResponses: skippedResponses.length,
                 byType: byType,
-                allResponses: responses,
+                allResponses: responses.map(r => ({
+                    url: r.url,
+                    status: r.status,
+                    type: r.resourceType,
+                    size: r.size,
+                    encodedSize: r.encodedSize,
+                    fromCache: r.fromCache
+                })),
                 failedRequests: failedRequests
             };
 
@@ -418,15 +580,16 @@ async function testGameLoading(gameUrl, options = {}) {
             console.log('');
         }
 
-        // Final summary box
+        // Final summary
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
         console.log(`${colors.green}✓ Test Complete${colors.reset}`);
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
         console.log('');
-        console.log(`  Total Files:    ${responses.length}`);
-        console.log(`  Total Size:     ${formatBytes(totalSize)}`);
-        console.log(`  Loading Time:   ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
-        console.log(`  Failed:         ${failedRequests.length > 0 ? colors.red : colors.green}${failedRequests.length}${colors.reset}`);
+        console.log(`  Total Resources:  ${responses.length}`);
+        console.log(`  Total Size:       ${formatBytes(totalSize)}`);
+        console.log(`  Transferred:      ${formatBytes(totalEncodedSize)}`);
+        console.log(`  Loading Time:     ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
+        console.log(`  Failed:           ${failedRequests.length > 0 ? colors.red : colors.green}${failedRequests.length}${colors.reset}`);
         console.log('');
 
         return {
@@ -434,6 +597,7 @@ async function testGameLoading(gameUrl, options = {}) {
             totalTime: totalTime,
             totalRequests: responses.length,
             totalSize: totalSize,
+            totalEncodedSize: totalEncodedSize,
             failedRequests: failedRequests.length,
             byType: byType
         };
@@ -454,7 +618,7 @@ if (require.main === module) {
     const args = process.argv.slice(2);
 
     if (args.length === 0) {
-        console.log('Usage: node puppeteer_game_test.js <game_url> [options]');
+        console.log('Usage: node puppeteer_game_test_fixed.js <game_url> [options]');
         console.log('');
         console.log('Options:');
         console.log('  --headless=false      Show browser window');
@@ -463,7 +627,7 @@ if (require.main === module) {
         console.log('  --output=report.json  Save detailed report to file');
         console.log('');
         console.log('Example:');
-        console.log('  node puppeteer_game_test.js "https://example.com/game?token=..." --wait=10000 --output=report.json');
+        console.log('  node puppeteer_game_test_fixed.js "https://example.com/game?token=..." --output=report.json');
         process.exit(1);
     }
 

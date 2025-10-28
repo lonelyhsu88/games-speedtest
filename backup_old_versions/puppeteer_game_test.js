@@ -1,19 +1,24 @@
 #!/usr/bin/env node
 
 /**
- * Puppeteer Game Loading Test (FIXED VERSION)
+ * Puppeteer Game Loading Test
  *
- * Key improvements:
- * 1. Accurate response size using CDP getResponseBody
- * 2. Fixed requestCount tracking logic
- * 3. Better error handling with counters
- * 4. Improved click detection
- * 5. Resource loading waterfall tracking
+ * This script uses a real browser (Chromium) to test game loading
+ * and captures ALL network requests including:
+ * - HTML, CSS, JavaScript
+ * - Images, Audio, Fonts
+ * - Dynamically loaded resources
+ * - WebGL initialization
+ * - Game engine startup
+ *
+ * Usage:
+ *   node puppeteer_game_test.js <game_url>
  */
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
+// Colors for terminal output
 const colors = {
     reset: '\x1b[0m',
     bright: '\x1b[1m',
@@ -61,7 +66,7 @@ async function testGameLoading(gameUrl, options = {}) {
     } = options;
 
     console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
-    console.log(`${colors.cyan}  Puppeteer Game Loading Test (FIXED)${colors.reset}`);
+    console.log(`${colors.cyan}  Puppeteer Game Loading Test${colors.reset}`);
     console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
     console.log('');
     console.log(`${colors.yellow}Game URL:${colors.reset}`);
@@ -73,9 +78,9 @@ async function testGameLoading(gameUrl, options = {}) {
     console.log(`  Wait for network idle: ${waitForIdle}ms`);
     console.log('');
 
+    const requests = [];
     const responses = [];
     const failedRequests = [];
-    const skippedResponses = [];
     let startTime = null;
 
     console.log(`${colors.cyan}Launching browser...${colors.reset}`);
@@ -110,66 +115,42 @@ async function testGameLoading(gameUrl, options = {}) {
         // Disable cache
         await page.setCacheEnabled(false);
 
-        // Enable Chrome DevTools Protocol for accurate size tracking
-        const client = await page.target().createCDPSession();
-        await client.send('Network.enable');
-
-        // Track requests using CDP for accurate size
-        const requestIdMap = new Map();
-
-        client.on('Network.requestWillBeSent', event => {
-            requestIdMap.set(event.requestId, {
-                url: event.request.url,
-                method: event.request.method,
-                startTime: event.timestamp * 1000,
-                type: event.type
+        // Listen to all network requests
+        page.on('request', request => {
+            requests.push({
+                url: request.url(),
+                method: request.method(),
+                resourceType: request.resourceType(),
+                time: Date.now()
             });
         });
 
-        client.on('Network.responseReceived', async event => {
-            const request = requestIdMap.get(event.requestId);
-            if (!request) return;
+        // Listen to all network responses
+        page.on('response', async response => {
+            const request = response.request();
+            const timing = response.timing();
 
             try {
-                // Get actual response body to calculate real size
-                const responseBody = await client.send('Network.getResponseBody', {
-                    requestId: event.requestId
-                }).catch(() => null);
-
-                let actualSize = 0;
-                if (responseBody) {
-                    actualSize = Buffer.byteLength(
-                        responseBody.body,
-                        responseBody.base64Encoded ? 'base64' : 'utf8'
-                    );
-                } else {
-                    // Fallback to encodedDataLength from CDP
-                    actualSize = event.response.encodedDataLength || 0;
-                }
-
+                const headers = response.headers();
                 responses.push({
-                    url: event.response.url,
-                    status: event.response.status,
-                    resourceType: getResourceType(event.response.url),
-                    size: actualSize,
-                    encodedSize: event.response.encodedDataLength || 0,
+                    url: response.url(),
+                    status: response.status(),
+                    resourceType: getResourceType(response.url()),
+                    size: parseInt(headers['content-length'] || 0),
                     time: Date.now(),
-                    timing: event.response.timing,
-                    mimeType: event.response.mimeType || 'unknown',
-                    fromCache: event.response.fromDiskCache || event.response.fromServiceWorker || false
+                    timing: timing,
+                    mimeType: headers['content-type'] || 'unknown'
                 });
             } catch (error) {
-                skippedResponses.push({
-                    url: event.response.url,
-                    error: error.message
-                });
+                // Some responses might fail to get headers
             }
         });
 
-        client.on('Network.loadingFailed', event => {
+        // Listen to failed requests
+        page.on('requestfailed', request => {
             failedRequests.push({
-                url: event.documentURL || 'unknown',
-                error: event.errorText,
+                url: request.url(),
+                failure: request.failure(),
                 time: Date.now()
             });
         });
@@ -181,17 +162,27 @@ async function testGameLoading(gameUrl, options = {}) {
                 const type = msg.type();
                 const text = msg.text();
                 if (type === 'error') {
+                    // Track WebGL errors but don't spam the console
                     if (text.toLowerCase().includes('webgl') || text.includes('JSHandle@error')) {
                         webglErrors.push(text);
                         if (webglErrors.length === 1) {
-                            console.log(`${colors.yellow}[Note]${colors.reset} WebGL errors detected (common in headless mode)`);
+                            console.log(`${colors.yellow}[Note]${colors.reset} WebGL errors detected (common in headless mode, won't affect resource loading)`);
                         }
                     } else {
-                        console.log(`${colors.red}[Browser Error]${colors.reset} ${text}`);
+                        console.log(`${colors.red}[Browser Console Error]${colors.reset} ${text}`);
                     }
                 }
             });
         }
+
+        // Listen to page errors
+        page.on('pageerror', error => {
+            const msg = error.message;
+            // Ignore WebGL-related errors
+            if (!msg.includes('getParameter') && !msg.includes('webgl')) {
+                console.log(`${colors.red}[Page Error]${colors.reset} ${msg}`);
+            }
+        });
 
         console.log(`${colors.cyan}Navigating to game...${colors.reset}`);
         console.log('');
@@ -213,142 +204,121 @@ async function testGameLoading(gameUrl, options = {}) {
         const beforeClickRequests = responses.length;
 
         try {
-            // Wait for page to be ready
+            // Wait a bit for the page to be ready
             await new Promise(resolve => setTimeout(resolve, 3000));
 
-            // Improved click detection
+            // Try to find and click common game start buttons
             const clicked = await page.evaluate(() => {
+                // Common button selectors and text patterns
                 const patterns = [
                     'CLICK TO PLAY',
                     'START',
                     'PLAY',
                     '開始',
                     '播放',
-                    'TAP TO START',
-                    'CLICK TO START'
+                    'TAP TO START'
                 ];
 
                 // Try to find by text content
                 const allElements = document.querySelectorAll('*');
                 for (const el of allElements) {
                     const text = el.textContent?.trim().toUpperCase();
-                    if (text && patterns.some(p => text.includes(p))) {
+                    if (text && patterns.some(p => text.includes(p.toUpperCase()))) {
+                        // Check if element is clickable
                         const style = window.getComputedStyle(el);
-                        const rect = el.getBoundingClientRect();
-
-                        // More thorough visibility check
-                        if (style.display !== 'none' &&
-                            style.visibility !== 'hidden' &&
-                            style.opacity !== '0' &&
-                            style.pointerEvents !== 'none' &&
-                            rect.width > 0 && rect.height > 0) {
-
-                            // Click at center of element
-                            const x = rect.left + rect.width / 2;
-                            const y = rect.top + rect.height / 2;
-
+                        if (style.display !== 'none' && style.visibility !== 'hidden') {
                             el.click();
-                            return { success: true, element: el.tagName, text: text };
+                            return true;
                         }
                     }
                 }
 
-                // Try to find and click canvas at center
+                // Try to find canvas and click it (some games start on canvas click)
                 const canvas = document.querySelector('canvas');
                 if (canvas) {
-                    const rect = canvas.getBoundingClientRect();
-                    const x = rect.left + rect.width / 2;
-                    const y = rect.top + rect.height / 2;
-
-                    const event = new MouseEvent('click', {
-                        view: window,
-                        bubbles: true,
-                        cancelable: true,
-                        clientX: x,
-                        clientY: y
-                    });
-                    canvas.dispatchEvent(event);
-                    return { success: true, element: 'canvas', text: 'center click' };
+                    canvas.click();
+                    return true;
                 }
 
-                return { success: false };
+                return false;
             });
 
-            if (clicked.success) {
-                console.log(`  ${colors.green}✓${colors.reset} Clicked: ${clicked.element} - "${clicked.text}"`);
-                console.log(`  ${colors.yellow}Waiting for post-click resources...${colors.reset}`);
+            if (clicked) {
+                console.log(`  ${colors.green}✓${colors.reset} Game start button clicked`);
+                console.log(`  ${colors.yellow}Waiting for game to start and load additional resources...${colors.reset}`);
 
-                // Wait for resources triggered by the click
+                // Wait for resources triggered by the click to start loading
                 await new Promise(resolve => setTimeout(resolve, 5000));
 
                 const afterClickRequests = responses.length;
                 const newRequests = afterClickRequests - beforeClickRequests;
-                console.log(`  ${colors.cyan}${newRequests} new resources loaded after clicking${colors.reset}`);
+                console.log(`  ${colors.cyan}${newRequests} new resources loaded after clicking start${colors.reset}`);
                 console.log('');
             } else {
                 console.log(`  ${colors.yellow}⚠${colors.reset} No start button found (game may auto-start)`);
                 console.log('');
             }
         } catch (error) {
-            console.log(`  ${colors.yellow}⚠${colors.reset} Click error: ${error.message}`);
+            console.log(`  ${colors.yellow}⚠${colors.reset} Could not interact with page: ${error.message}`);
             console.log('');
         }
 
-        // Wait for game to be ready - FIXED tracking logic
-        console.log(`${colors.cyan}Waiting for game to fully load...${colors.reset}`);
+        // Wait for game to be ready - monitor until network settles and game UI is ready
+        console.log(`${colors.cyan}Waiting for game to load and become ready...${colors.reset}`);
 
         let lastRequestTime = Date.now();
-        const maxWaitTime = Math.max(waitForIdle, 60000);
-        const idleThreshold = 5000;
+        let requestCount = responses.length;
+        const maxWaitTime = Math.max(waitForIdle, 60000); // At least 60 seconds max
+        const idleThreshold = 5000; // 5 seconds with no new requests (increased from 2s)
         const startWaitTime = Date.now();
 
-        // Snapshot of count at start of idle detection
-        let snapshotCount = responses.length;
+        // Update last request time tracking
+        const requestTimeTracker = setInterval(() => {
+            if (responses.length > requestCount) {
+                lastRequestTime = Date.now();
+                requestCount = responses.length;
+            }
+        }, 100);
 
         while (Date.now() - startWaitTime < maxWaitTime) {
-            // Update last request time if new responses arrived
-            if (responses.length > snapshotCount) {
-                lastRequestTime = Date.now();
-                snapshotCount = responses.length;
-            }
-
             const idleTime = Date.now() - lastRequestTime;
             const elapsed = Date.now() - startWaitTime;
 
-            // Check if ready (at least 15s elapsed AND 5s idle)
+            // Check if game is ready (network mostly idle)
+            // Wait for at least 15 seconds AND network idle for 5 seconds
             if (elapsed >= 15000 && idleTime >= idleThreshold && responses.length > 20) {
+                // Give extra time for any final lazy-loaded resources
                 console.log('');
-                console.log(`  ${colors.yellow}Network idle detected, verifying...${colors.reset}`);
-
-                const beforeVerify = responses.length;
+                console.log(`  ${colors.yellow}Network appears idle, waiting 5 more seconds to ensure all resources loaded...${colors.reset}`);
                 await new Promise(resolve => setTimeout(resolve, 5000));
-                const afterVerify = responses.length;
 
-                if (afterVerify > beforeVerify) {
-                    console.log(`  ${colors.yellow}${afterVerify - beforeVerify} more resources detected, continuing...${colors.reset}`);
-                    snapshotCount = afterVerify;
+                // Check if any new resources arrived during the wait
+                if (responses.length > requestCount) {
+                    console.log(`  ${colors.yellow}New resources detected (${responses.length - requestCount}), continuing to monitor...${colors.reset}`);
                     lastRequestTime = Date.now();
+                    requestCount = responses.length;
                     continue;
                 }
-
-                console.log(`  ${colors.green}✓${colors.reset} Verified - no new resources`);
                 break;
             }
 
-            // Progress indicator
+            // Progress indicator every 2 seconds
             if (Math.floor(elapsed / 2000) !== Math.floor((elapsed - 500) / 2000)) {
-                process.stdout.write(`\r  ${formatTime(elapsed)} | ${responses.length} resources | ${formatTime(idleTime)} idle`);
+                process.stdout.write(`\r  ${formatTime(elapsed)} elapsed | ${responses.length} resources loaded | ${formatTime(idleTime)} since last request`);
             }
 
             await new Promise(resolve => setTimeout(resolve, 500));
         }
 
+        clearInterval(requestTimeTracker);
         console.log('');
         console.log(`${colors.green}✓${colors.reset} Game loading complete`);
-        console.log('');
 
         const finalTime = Date.now();
         const totalTime = finalTime - startTime;
+
+        console.log(`${colors.green}✓${colors.reset} All resources loaded`);
+        console.log('');
 
         // Analyze the results
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
@@ -359,8 +329,6 @@ async function testGameLoading(gameUrl, options = {}) {
         // Group by resource type
         const byType = {};
         let totalSize = 0;
-        let totalEncodedSize = 0;
-        let fromCacheCount = 0;
 
         responses.forEach(resp => {
             const type = resp.resourceType;
@@ -368,21 +336,17 @@ async function testGameLoading(gameUrl, options = {}) {
                 byType[type] = {
                     count: 0,
                     size: 0,
-                    encodedSize: 0,
                     urls: []
                 };
             }
             byType[type].count++;
             byType[type].size += resp.size;
-            byType[type].encodedSize += resp.encodedSize;
             byType[type].urls.push({
                 url: resp.url,
                 size: resp.size,
                 status: resp.status
             });
             totalSize += resp.size;
-            totalEncodedSize += resp.encodedSize;
-            if (resp.fromCache) fromCacheCount++;
         });
 
         // Display by resource type
@@ -400,15 +364,13 @@ async function testGameLoading(gameUrl, options = {}) {
         console.log('');
         console.log(`  ${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
         console.log(`  ${colors.bright}Total:${colors.reset}       ${String(responses.length).padStart(3)} files | ${formatBytes(totalSize).padStart(12)}`);
-        console.log(`  ${colors.cyan}Transferred:${colors.reset} ${formatBytes(totalEncodedSize).padStart(12)} (after compression)`);
-        console.log(`  ${colors.cyan}From cache:${colors.reset}  ${fromCacheCount} resources`);
         console.log('');
 
         // Timeline
         console.log(`${colors.yellow}Loading Timeline:${colors.reset}`);
         console.log('');
         console.log(`  Navigation to networkidle2:  ${formatTime(navigationTime - startTime)}`);
-        console.log(`  Additional loading time:     ${formatTime(finalTime - navigationTime)}`);
+        console.log(`  Additional wait time:        ${formatTime(waitForIdle)}`);
         console.log(`  ${colors.cyan}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${colors.reset}`);
         console.log(`  ${colors.bright}Total loading time:${colors.reset}          ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
         console.log('');
@@ -417,19 +379,10 @@ async function testGameLoading(gameUrl, options = {}) {
         if (failedRequests.length > 0) {
             console.log(`${colors.red}Failed Requests: ${failedRequests.length}${colors.reset}`);
             console.log('');
-            failedRequests.slice(0, 10).forEach(req => {
+            failedRequests.forEach(req => {
                 console.log(`  ${colors.red}✗${colors.reset} ${req.url}`);
-                console.log(`    Error: ${req.error}`);
+                console.log(`    Reason: ${req.failure.errorText}`);
             });
-            if (failedRequests.length > 10) {
-                console.log(`  ... and ${failedRequests.length - 10} more`);
-            }
-            console.log('');
-        }
-
-        // Skipped responses (for debugging)
-        if (skippedResponses.length > 0 && verbose) {
-            console.log(`${colors.yellow}Skipped Responses: ${skippedResponses.length}${colors.reset}`);
             console.log('');
         }
 
@@ -454,19 +407,9 @@ async function testGameLoading(gameUrl, options = {}) {
                 navigationTime: navigationTime - startTime,
                 totalRequests: responses.length,
                 totalSize: totalSize,
-                totalEncodedSize: totalEncodedSize,
-                fromCacheCount: fromCacheCount,
                 failedRequests: failedRequests.length,
-                skippedResponses: skippedResponses.length,
                 byType: byType,
-                allResponses: responses.map(r => ({
-                    url: r.url,
-                    status: r.status,
-                    type: r.resourceType,
-                    size: r.size,
-                    encodedSize: r.encodedSize,
-                    fromCache: r.fromCache
-                })),
+                allResponses: responses,
                 failedRequests: failedRequests
             };
 
@@ -475,16 +418,15 @@ async function testGameLoading(gameUrl, options = {}) {
             console.log('');
         }
 
-        // Final summary
+        // Final summary box
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
         console.log(`${colors.green}✓ Test Complete${colors.reset}`);
         console.log(`${colors.cyan}════════════════════════════════════════════════════════${colors.reset}`);
         console.log('');
-        console.log(`  Total Resources:  ${responses.length}`);
-        console.log(`  Total Size:       ${formatBytes(totalSize)}`);
-        console.log(`  Transferred:      ${formatBytes(totalEncodedSize)}`);
-        console.log(`  Loading Time:     ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
-        console.log(`  Failed:           ${failedRequests.length > 0 ? colors.red : colors.green}${failedRequests.length}${colors.reset}`);
+        console.log(`  Total Files:    ${responses.length}`);
+        console.log(`  Total Size:     ${formatBytes(totalSize)}`);
+        console.log(`  Loading Time:   ${colors.yellow}${formatTime(totalTime)}${colors.reset}`);
+        console.log(`  Failed:         ${failedRequests.length > 0 ? colors.red : colors.green}${failedRequests.length}${colors.reset}`);
         console.log('');
 
         return {
@@ -492,7 +434,6 @@ async function testGameLoading(gameUrl, options = {}) {
             totalTime: totalTime,
             totalRequests: responses.length,
             totalSize: totalSize,
-            totalEncodedSize: totalEncodedSize,
             failedRequests: failedRequests.length,
             byType: byType
         };
@@ -513,7 +454,7 @@ if (require.main === module) {
     const args = process.argv.slice(2);
 
     if (args.length === 0) {
-        console.log('Usage: node puppeteer_game_test_fixed.js <game_url> [options]');
+        console.log('Usage: node puppeteer_game_test.js <game_url> [options]');
         console.log('');
         console.log('Options:');
         console.log('  --headless=false      Show browser window');
@@ -522,7 +463,7 @@ if (require.main === module) {
         console.log('  --output=report.json  Save detailed report to file');
         console.log('');
         console.log('Example:');
-        console.log('  node puppeteer_game_test_fixed.js "https://example.com/game?token=..." --output=report.json');
+        console.log('  node puppeteer_game_test.js "https://example.com/game?token=..." --wait=10000 --output=report.json');
         process.exit(1);
     }
 

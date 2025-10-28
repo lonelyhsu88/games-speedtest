@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# Game Loading Test with Puppeteer (FIXED VERSION)
+# Game Loading Test with Puppeteer
 #
 # This script:
 # 1. Gets game URLs from API (using whitelisted IP)
-# 2. Uses Puppeteer FIXED version with accurate size tracking
-# 3. Captures ALL resources using Chrome DevTools Protocol (CDP)
-# 4. Reports accurate loading times and resource sizes
+# 2. Uses Puppeteer to test REAL browser loading
+# 3. Captures ALL resources (including dynamic ones)
+# 4. Reports accurate loading times
 #
 # Usage:
 #   ./test_games_with_puppeteer.sh [num_games] [lang] [wait_time]
@@ -343,15 +343,14 @@ for ((i=0; i<${#GAME_URLS[@]}; i++)); do
         --output="$OUTPUT_JSON" \
         2>&1 | tee /tmp/puppeteer_output.txt
 
-    # Extract results from JSON (including new fields from fixed version)
+    # Extract results from JSON
     if [ -f "$OUTPUT_JSON" ]; then
         TOTAL_TIME=$(node -e "console.log(require('$OUTPUT_JSON').totalTime)")
         TOTAL_SIZE=$(node -e "console.log(require('$OUTPUT_JSON').totalSize)")
-        ENCODED_SIZE=$(node -e "const data = require('$OUTPUT_JSON'); console.log(data.totalEncodedSize || 0);")
         TOTAL_REQUESTS=$(node -e "console.log(require('$OUTPUT_JSON').totalRequests)")
 
-        # Save to results file (including encoded size)
-        echo "$game|$TOTAL_TIME|$TOTAL_SIZE|$ENCODED_SIZE|$TOTAL_REQUESTS" >> "$RESULTS_FILE"
+        # Save to results file
+        echo "$game|$TOTAL_TIME|$TOTAL_SIZE|$TOTAL_REQUESTS" >> "$RESULTS_FILE"
     fi
 
     echo ""
@@ -393,40 +392,28 @@ echo -e "  Max Wait:    ${GREEN}${WAIT_TIME}ms${NC}"
 echo ""
 
 if [ -f "$RESULTS_FILE" ]; then
-    echo -e "${YELLOW}Complete Loading Times (Real Browser with Accurate Size Tracking):${NC}"
+    echo -e "${YELLOW}Complete Loading Times (Real Browser):${NC}"
     echo ""
 
-    while IFS='|' read -r game time size encoded requests; do
+    while IFS='|' read -r game time size requests; do
         time_s=$(echo "scale=2; $time / 1000" | bc)
         size_mb=$(echo "scale=2; $size / 1024 / 1024" | bc)
 
-        # Handle both old format (4 fields) and new format (5 fields)
-        if [ -z "$requests" ]; then
-            # Old format: game|time|size|requests
-            requests=$encoded
-            printf "  ${GREEN}✓${NC} %-30s ${YELLOW}%7.2fs${NC} | %6.2f MB | %3d requests\n" \
-                   "$game" "$time_s" "$size_mb" "$requests"
-        else
-            # New format: game|time|size|encoded|requests
-            encoded_mb=$(echo "scale=2; $encoded / 1024 / 1024" | bc)
-            printf "  ${GREEN}✓${NC} %-30s ${YELLOW}%7.2fs${NC} | ${CYAN}%6.2f MB${NC} (${MAGENTA}%6.2f MB${NC} transferred) | %3d requests\n" \
-                   "$game" "$time_s" "$size_mb" "$encoded_mb" "$requests"
-        fi
+        printf "  ${GREEN}✓${NC} %-30s ${YELLOW}%7.2fs${NC} | %6.2f MB | %3d requests\n" \
+               "$game" "$time_s" "$size_mb" "$requests"
     done < "$RESULTS_FILE"
 
     echo ""
-    echo -e "${CYAN}Note:${NC} Using FIXED version with accurate resource tracking via CDP"
+    echo -e "${CYAN}Comparison with curl tests:${NC}"
     echo ""
-    echo -e "${CYAN}Comparison with old tests:${NC}"
+    echo -e "  ${YELLOW}Curl test${NC} only measures HTTP download time (a few seconds)"
+    echo -e "  ${YELLOW}Puppeteer test${NC} measures complete browser loading including:"
+    echo "    • JavaScript execution"
+    echo "    • Dynamic resource loading"
+    echo "    • WebGL initialization"
+    echo "    • Game engine startup"
     echo ""
-    echo -e "  ${YELLOW}Old version${NC} used content-length headers (often missing/wrong)"
-    echo -e "  ${YELLOW}Fixed version${NC} uses Chrome DevTools Protocol (CDP) to get:"
-    echo "    • Actual response body sizes (accurate)"
-    echo "    • Transferred sizes (after compression)"
-    echo "    • Cache information"
-    echo "    • Complete resource tracking"
-    echo ""
-    echo -e "  ${GREEN}This matches what Chrome DevTools shows!${NC}"
+    echo -e "  ${GREEN}This is the REAL user experience!${NC}"
     echo ""
 fi
 

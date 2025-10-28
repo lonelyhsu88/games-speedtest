@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 ################################################################################
-# Interactive Game Testing Menu (FIXED VERSION)
-#
+# Interactive Game Testing Menu
+# 
 # This script provides an interactive menu to select games for testing
-# Uses the FIXED puppeteer test with accurate size tracking via CDP
 ################################################################################
 
 # Colors
@@ -85,10 +84,8 @@ SELECTED_GAMES=()
 show_menu() {
     clear
     echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${BLUE}║   Interactive Game Selection Menu (FIXED)             ║${NC}"
+    echo -e "${BLUE}║   Interactive Game Selection Menu                     ║${NC}"
     echo -e "${BLUE}╚════════════════════════════════════════════════════════╝${NC}"
-    echo ""
-    echo -e "${GREEN}✓ Using accurate size tracking with CDP${NC}"
     echo ""
     
     echo -e "${CYAN}Available Games:${NC}"

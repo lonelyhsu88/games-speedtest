@@ -7,7 +7,16 @@
       "Bash(git init:*)",
       "Bash(git branch:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(awk '{print $9, \"\"\"\"(\"\"\"\" $5 \"\"\"\")\"\"\"\"}')",
+      "Bash(git push:*)",
+      "Bash(gh repo create:*)",
+      "Bash(gh repo:*)",
+      "Bash(git submodule add:*)",
+      "Bash(node:*)",
+      "Bash(open -a \"Google Chrome\" \"https://hash.shuangzi6688.com/StandAloneEgyptHilo/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cba9dc4e142d5e61e5760b8cfd50931cd03f5ea76c6427c81c57ca25709241f435&Lang=en-US\")",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
