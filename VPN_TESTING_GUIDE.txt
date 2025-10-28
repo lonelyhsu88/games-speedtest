@@ -1,0 +1,311 @@
+╔════════════════════════════════════════════════════════════════╗
+║     Puppeteer VPN 測試指南                                      ║
+╚════════════════════════════════════════════════════════════════╝
+
+更新日期：2025-10-27
+
+═══════════════════════════════════════════════════════════════════
+🎯 重要說明
+═══════════════════════════════════════════════════════════════════
+
+腳本現在已經改進，會在正確的時機提示你切換 VPN！
+
+工作流程：
+  1. 腳本先在白名單 IP 下獲取遊戲 URL
+  2. ⏸️  暫停並提示你連接 VPN
+  3. ✅ 你連接 VPN 到孟加拉
+  4. 按 Enter 繼續
+  5. 🚀 開始從孟加拉進行 Puppeteer 測試
+
+═══════════════════════════════════════════════════════════════════
+🚀 使用方式
+═══════════════════════════════════════════════════════════════════
+
+步驟 1：確保你在白名單 IP（不要連 VPN）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+cd /tmp/cdn/game-test/
+
+# 檢查你的 IP
+curl -s https://api.ipify.org
+# 應該是白名單 IP（例如：61.218.59.85 或 16.162.117.249）
+
+
+步驟 2：運行測試腳本
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+./test_games_with_puppeteer.sh 3 en-US 10000
+
+腳本會：
+  ✓ 顯示配置信息
+  ✓ 檢查當前 IP
+  ✓ 選擇 3 個隨機遊戲
+  ✓ 從 API 獲取遊戲 URL
+  ✓ 顯示成功消息
+
+
+步驟 3：等待提示並連接 VPN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+腳本會顯示：
+
+  ╔════════════════════════════════════════════════════════╗
+  ║   URLs Retrieved - Ready for VPN Switch                ║
+  ╚════════════════════════════════════════════════════════╝
+
+  IMPORTANT: Now switch to Bangladesh VPN!
+
+  Step-by-step:
+    1. The game URLs have been retrieved (using whitelisted IP)
+    2. Connect your VPN to Bangladesh now
+    3. Press Enter when VPN is connected to start testing
+
+  Game URLs saved to: /tmp/game_urls_temp.txt
+
+  Press Enter when VPN is connected to Bangladesh...
+
+⏸️  此時腳本暫停等待
+
+
+步驟 4：連接 VPN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 打開你的 hapiVPN
+2. 連接到孟加拉伺服器
+3. 等待 VPN 連接成功
+4. 確認已連接
+
+
+步驟 5：按 Enter 繼續
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+按下 Enter 後，腳本會：
+  ✓ 驗證你的新 IP
+  ✓ 檢查是否在孟加拉
+  ✓ 顯示確認信息
+  ✓ 開始 Puppeteer 測試
+
+示例輸出：
+
+  Verifying VPN connection...
+    Current IP: 45.95.161.29
+    Location: Bangladesh
+    ✓ VPN connected to Bangladesh!
+
+  ╔════════════════════════════════════════════════════════╗
+  ║   Starting Puppeteer Tests from Bangladesh            ║
+  ╚════════════════════════════════════════════════════════╝
+
+
+步驟 6：等待測試完成
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+測試會自動進行：
+  • 每個遊戲測試約 15-20 秒
+  • 測試 3 個遊戲約需 1-2 分鐘
+  • 完成後會顯示結果摘要
+
+═══════════════════════════════════════════════════════════════════
+📝 完整示例
+═══════════════════════════════════════════════════════════════════
+
+$ cd /tmp/cdn/game-test/
+$ ./test_games_with_puppeteer.sh 3 en-US 10000
+
+╔════════════════════════════════════════════════════════╗
+║   Puppeteer Game Loading Test (Real Browser)          ║
+╚════════════════════════════════════════════════════════╝
+
+Configuration:
+  Number of games: 3
+  Language: en-US
+  Wait time after networkidle: 10000ms
+
+[Step 1] Checking your current IP...
+  Your IP: 16.162.117.249                    ← 白名單 IP
+
+[Step 2] Selecting 3 random games...
+Selected games:
+  1. StandAloneDice
+  2. StandAloneHilo
+  3. EggHuntBingo
+
+[Step 3] Getting game URLs from API...
+
+[1/3] Getting URL for StandAloneDice...
+  ✓ Success
+[2/3] Getting URL for StandAloneHilo...
+  ✓ Success
+[3/3] Getting URL for EggHuntBingo...
+  ✓ Success
+
+✓ Retrieved 3 game URLs
+
+╔════════════════════════════════════════════════════════╗
+║   URLs Retrieved - Ready for VPN Switch                ║
+╚════════════════════════════════════════════════════════╝
+
+IMPORTANT: Now switch to Bangladesh VPN!
+
+Step-by-step:
+  1. The game URLs have been retrieved (using whitelisted IP)
+  2. Connect your VPN to Bangladesh now           ← 現在連接 VPN
+  3. Press Enter when VPN is connected to start testing
+
+Game URLs saved to: /tmp/game_urls_temp.txt
+
+Press Enter when VPN is connected to Bangladesh... ⏸️
+
+... (你連接 VPN) ...
+... (按 Enter) ...
+
+Verifying VPN connection...
+  Current IP: 45.95.161.29                       ← 新 IP
+  Location: Bangladesh                            ← 確認位置
+  ✓ VPN connected to Bangladesh!
+
+╔════════════════════════════════════════════════════════╗
+║   Starting Puppeteer Tests from Bangladesh            ║
+╚════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════
+Testing [1/3]: StandAloneDice
+═══════════════════════════════════════════════════════
+
+... (測試進行中) ...
+
+Total loading time: 16.35 s                     ← 孟加拉結果
+
+... (繼續測試其他遊戲) ...
+
+═══════════════════════════════════════════════════════════════════
+💡 提示和技巧
+═══════════════════════════════════════════════════════════════════
+
+1. 查看保存的 URL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+如果需要查看獲取的 URL：
+
+cat /tmp/game_urls_temp.txt
+
+輸出格式：
+  StandAloneDice|https://www.shuangzi6688.com/...
+  StandAloneHilo|https://www.shuangzi6688.com/...
+  EggHuntBingo|https://www.shuangzi6688.com/...
+
+
+2. 如果 VPN 連接失敗
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+如果按 Enter 後發現不在孟加拉：
+
+  Verifying VPN connection...
+    Current IP: 16.162.117.249
+    Location: Taiwan
+    ⚠ Warning: You are in Taiwan, not Bangladesh
+  Continue anyway? (y/n)
+
+選項：
+  • 輸入 n - 取消測試，重新連接 VPN 後重試
+  • 輸入 y - 仍然繼續測試（測試台灣性能）
+
+
+3. 測試不同數量的遊戲
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 測試 1 個遊戲（快速）
+./test_games_with_puppeteer.sh 1 en-US 10000
+
+# 測試 5 個遊戲（詳細）
+./test_games_with_puppeteer.sh 5 en-US 10000
+
+# 測試 10 個遊戲（完整）
+./test_games_with_puppeteer.sh 10 en-US 15000
+
+
+4. 調整等待時間
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+第三個參數是 networkidle2 後的等待時間（毫秒）：
+
+# 短等待（可能漏掉慢資源）
+./test_games_with_puppeteer.sh 3 en-US 5000
+
+# 標準等待（推薦）
+./test_games_with_puppeteer.sh 3 en-US 10000
+
+# 長等待（確保所有資源）
+./test_games_with_puppeteer.sh 3 en-US 15000
+
+
+5. 查看詳細結果
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+測試完成後：
+
+# 簡要結果
+cat puppeteer_results/results_*.txt
+
+# 詳細 JSON 報告
+ls puppeteer_results/*.json
+
+# 查看某個遊戲的詳細信息
+cat puppeteer_results/StandAloneDice_*.json | python3 -m json.tool
+
+═══════════════════════════════════════════════════════════════════
+⚠️  常見問題
+═══════════════════════════════════════════════════════════════════
+
+Q: 為什麼要等 VPN 連接後才測試？
+A: 因為 API 有 IP 白名單限制。必須先用白名單 IP 獲取遊戲 URL，
+   然後切換到孟加拉 VPN 才能測試從孟加拉訪問的真實性能。
+
+Q: 可以不用 VPN 測試嗎？
+A: 可以，但那測試的是從白名單位置（台灣）的性能，
+   不是孟加拉用戶的真實體驗。
+
+Q: Token 會過期嗎？
+A: 會。如果在獲取 URL 後等太久（>30分鐘），Token 可能過期。
+   建議在 5-10 分鐘內完成切換和測試。
+
+Q: 為什麼有些遊戲文件很少？
+A: 如果 Token 過期，動態資源（圖片、音頻）可能無法加載。
+   但核心引擎仍會加載，仍能測出網絡延遲差異。
+
+Q: 結果保存在哪裡？
+A: 所有結果保存在 ./puppeteer_results/ 目錄
+   每次測試生成帶時間戳的文件
+
+═══════════════════════════════════════════════════════════════════
+✅ 總結
+═══════════════════════════════════════════════════════════════════
+
+現在的工作流程：
+
+1. 🏠 在白名單 IP 下運行腳本
+     ↓
+2. 📝 腳本獲取遊戲 URL
+     ↓
+3. ⏸️  腳本暫停，提示連接 VPN
+     ↓
+4. 🔄 你連接 hapiVPN 到孟加拉
+     ↓
+5. ⏩ 按 Enter 繼續
+     ↓
+6. ✅ 腳本驗證 VPN 連接
+     ↓
+7. 🚀 開始從孟加拉測試
+     ↓
+8. 📊 生成對比報告
+
+這樣就能準確測試從孟加拉訪問的性能了！
+
+═══════════════════════════════════════════════════════════════════
+
+需要幫助？查看其他文檔：
+  • PUPPETEER_SETUP.txt - Puppeteer 安裝和配置
+  • BANGLADESH_VS_TAIWAN_COMPARISON.txt - 性能對比報告
+  • LOADING_TIME_EXPLANATION.txt - 加載時間詳解
+
+Happy Testing! 🚀

@@ -1,0 +1,1832 @@
+{
+  "url": "https://www.shuangzi6688.com/Bingo/EggHuntBingo/?Lang=en-US&ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476",
+  "timestamp": "2025-10-27T11:18:46.947Z",
+  "totalTime": 15317,
+  "navigationTime": 5317,
+  "totalRequests": 51,
+  "totalSize": 2657844,
+  "failedRequests": [
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/?ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&Lang=en-US",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563915652
+    },
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563913456&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=934420418.1761563915&ecid=1568096090&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563914&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FBingo%2FEggHuntBingo%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3307",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563915732
+    },
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am0v9209392845za200zb9209385929zd9209385929&_p=1761563913456&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=934420418.1761563915&ecid=1568096090&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_eu=AAAAAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563914&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FBingo%2FEggHuntBingo%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&dt=&en=user_engagement&_et=1053&tfd=4362",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563916043
+    },
+    {
+      "url": "https://z.clarity.ms/collect",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563916043
+    },
+    {
+      "url": "https://z.clarity.ms/collect",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563916044
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=FA81D97E0CD940E9884D9CBB88A3A1EB&RedC=c.clarity.ms&MXFR=224999D44074621C00538F4644746C1C",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563916044
+    }
+  ],
+  "byType": {
+    "Other": {
+      "count": 11,
+      "size": 198305,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/Bingo/EggHuntBingo/?Lang=en-US&ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476",
+          "size": 227,
+          "status": 200
+        },
+        {
+          "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+          "size": 699,
+          "status": 200
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-HS9NFED03C&cx=c&gtm=4e5am0",
+          "size": 136803,
+          "status": 200
+        },
+        {
+          "url": "https://ds-r.geminiservice.cc/domains?type=Bingo",
+          "size": 105,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/?ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&Lang=en-US",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://www.google.com.bd/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-HS9NFED03C&cid=934420418.1761563915&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&z=1181130585",
+          "size": 42,
+          "status": 200
+        },
+        {
+          "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563913456&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=934420418.1761563915&ecid=1568096090&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563914&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FBingo%2FEggHuntBingo%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3307",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-HS9NFED03C&cid=934420418.1761563915&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/?ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&Lang=en-US",
+          "size": 3197,
+          "status": 200
+        },
+        {
+          "url": "https://s.go-mpulse.net/boomerang/GHLLG-DXABY-LH7FL-6KNHY-7TNVC",
+          "size": 57206,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/md5.txt?ver=1761563923505",
+          "size": 26,
+          "status": 200
+        }
+      ]
+    },
+    "JavaScript": {
+      "count": 13,
+      "size": 1212014,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+          "size": 2159,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+          "size": 907,
+          "status": 200
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+          "size": 107478,
+          "status": 200
+        },
+        {
+          "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/src/settings.1a5ef.js",
+          "size": 247,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/main.f72e6.js",
+          "size": 3427,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/cocos2d-js-min.2773f.js",
+          "size": 616279,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/physics-min.941a2.js",
+          "size": 61315,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/index.d17e2.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/index.c52c8.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/index.af2d2.js",
+          "size": 398797,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/game-sdk-common.js",
+          "size": 20553,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/index.22c7a.js",
+          "size": 284,
+          "status": 200
+        }
+      ]
+    },
+    "JSON": {
+      "count": 17,
+      "size": 310556,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/config.json",
+          "size": 255,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/config.d17e2.json",
+          "size": 867,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/config.c52c8.json",
+          "size": 11074,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/config.af2d2.json",
+          "size": 1527,
+          "status": 200
+        },
+        {
+          "url": "https://c.go-mpulse.net/api/config.json?key=GHLLG-DXABY-LH7FL-6KNHY-7TNVC&d=www.shuangzi6688.com&t=5871880&v=1.720.0&sl=0&si=a8191237-55fa-4247-9f67-6c5c76ccb3e3-t4sff0&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022461",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/import/0b/0b6c4470e.9537f.json",
+          "size": 16450,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/import/07/0784d655b.c6526.json",
+          "size": 695,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/0e/0ee4ddacb.2a423.json",
+          "size": 102,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/08/083870200.c3edc.json",
+          "size": 688,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/bingoconfig.json?ver=prod-1.0.6",
+          "size": 108,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/globalConfig.json?ver=1761563921565",
+          "size": 1390,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/config.22c7a.json",
+          "size": 271440,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/i18n/bingo-common/en-US.json?v=1761563924600",
+          "size": 2441,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/i18n/bonus-bingo/en-US.json?v=1761563924601",
+          "size": 233,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/import/0e/0e829f30a.6ed78.json",
+          "size": 983,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/import/0a/0aa827e61.08ba0.json",
+          "size": 357,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/0b/0b259dd38.f1f97.json",
+          "size": 1946,
+          "status": 200
+        }
+      ]
+    },
+    "HTML": {
+      "count": 1,
+      "size": 117,
+      "urls": [
+        {
+          "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+          "size": 117,
+          "status": 200
+        }
+      ]
+    },
+    "Image": {
+      "count": 7,
+      "size": 927845,
+      "urls": [
+        {
+          "url": "https://c.clarity.ms/c.gif",
+          "size": 0,
+          "status": 302
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/favicon-96x96.92e00.png",
+          "size": 9016,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/native/02/0275e94c-56a7-410f-bd1a-fc7483f7d14a.cea68.png",
+          "size": 82,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/native/60/600301aa-3357-4a10-b086-84f011fa32ba.c3a3a.png",
+          "size": 7518,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/44/44eeecda-e781-42ac-9b51-889629ed64f4.e2711.png",
+          "size": 704152,
+          "status": 200
+        },
+        {
+          "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/native/eb/eb7783d7-aa32-4f30-967e-f0878b5c07c6.5e413.png",
+          "size": 19393,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/c0/c00caa2b-42e4-4461-8328-e8f91e9b38ea.c6812.png",
+          "size": 187684,
+          "status": 200
+        }
+      ]
+    },
+    "CSS": {
+      "count": 1,
+      "size": 1111,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/style-mobile.25fc5.css",
+          "size": 1111,
+          "status": 200
+        }
+      ]
+    },
+    "Audio": {
+      "count": 1,
+      "size": 7896,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/8f/8f1143a4-69c6-4225-a614-732691baf10c.64841.mp3",
+          "size": 7896,
+          "status": 200
+        }
+      ]
+    }
+  },
+  "allResponses": [
+    {
+      "url": "https://www.shuangzi6688.com/Bingo/EggHuntBingo/?Lang=en-US&ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 227,
+      "time": 1761563913194,
+      "timing": {
+        "requestTime": 36908.087423,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0,
+        "dnsEnd": 337.764,
+        "connectStart": 526.487,
+        "connectEnd": 1136.744,
+        "sslStart": 679.616,
+        "sslEnd": 1136.74,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1136.862,
+        "sendEnd": 1136.932,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1512.533,
+        "receiveHeadersEnd": 1512.616
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 2159,
+      "time": 1761563913455,
+      "timing": {
+        "requestTime": 36909.603899,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.564,
+        "sendEnd": 0.682,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 247.177,
+        "receiveHeadersEnd": 247.248
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 907,
+      "time": 1761563913456,
+      "timing": {
+        "requestTime": 36909.603996,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.51,
+        "sendEnd": 0.586,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 257.263,
+        "receiveHeadersEnd": 257.315
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/config.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 255,
+      "time": 1761563913731,
+      "timing": {
+        "requestTime": 36909.865536,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.397,
+        "sendEnd": 0.474,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 271.645,
+        "receiveHeadersEnd": 271.711
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "HTML",
+      "size": 117,
+      "time": 1761563914180,
+      "timing": {
+        "requestTime": 36909.910972,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.284,
+        "dnsEnd": 1.219,
+        "connectStart": 1.304,
+        "connectEnd": 499.002,
+        "sslStart": 149.782,
+        "sslEnd": 498.998,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 499.202,
+        "sendEnd": 499.285,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 675.462,
+        "receiveHeadersEnd": 675.5
+      },
+      "mimeType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 699,
+      "time": 1761563914328,
+      "timing": {
+        "requestTime": 36909.865243,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.377,
+        "dnsEnd": 202.072,
+        "connectStart": 202.094,
+        "connectEnd": 715.971,
+        "sslStart": 525.423,
+        "sslEnd": 715.967,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 716.039,
+        "sendEnd": 716.078,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 868.472,
+        "receiveHeadersEnd": 868.508
+      },
+      "mimeType": "application/x-javascript"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 107478,
+      "time": 1761563914591,
+      "timing": {
+        "requestTime": 36909.86451,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.271,
+        "dnsEnd": 4.695,
+        "connectStart": 4.8,
+        "connectEnd": 530.55,
+        "sslStart": 196.013,
+        "sslEnd": 530.546,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 530.671,
+        "sendEnd": 530.747,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 718.288,
+        "receiveHeadersEnd": 718.352
+      },
+      "mimeType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-HS9NFED03C&cx=c&gtm=4e5am0",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 136803,
+      "time": 1761563914967,
+      "timing": {
+        "requestTime": 36911.009071,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.533,
+        "sendEnd": 0.655,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 177.987,
+        "receiveHeadersEnd": 178.075
+      },
+      "mimeType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://ds-r.geminiservice.cc/domains?type=Bingo",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 105,
+      "time": 1761563915118,
+      "timing": {
+        "requestTime": 36910.141757,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.204,
+        "dnsEnd": 501.567,
+        "connectStart": 501.752,
+        "connectEnd": 1018.643,
+        "sslStart": 671.434,
+        "sslEnd": 1018.64,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1018.745,
+        "sendEnd": 1018.827,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1383.158,
+        "receiveHeadersEnd": 1383.215
+      },
+      "mimeType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "status": 302,
+      "resourceType": "Image",
+      "size": 0,
+      "time": 1761563915442,
+      "timing": {
+        "requestTime": 36910.736284,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.306,
+        "dnsEnd": 177.669,
+        "connectStart": 177.837,
+        "connectEnd": 789.18,
+        "sslStart": 322.778,
+        "sslEnd": 789.177,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 789.249,
+        "sendEnd": 789.305,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1112.689,
+        "receiveHeadersEnd": 1112.754
+      },
+      "mimeType": "unknown"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/?ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563915602,
+      "timing": {
+        "requestTime": 36911.526194,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.24,
+        "sendEnd": 0.29,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 482.272,
+        "receiveHeadersEnd": 482.337
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 0,
+      "time": 1761563915652,
+      "timing": {
+        "requestTime": 36910.736177,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.285,
+        "dnsEnd": 180.353,
+        "connectStart": 180.459,
+        "connectEnd": 785.451,
+        "sslStart": 323.109,
+        "sslEnd": 785.447,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 785.544,
+        "sendEnd": 785.623,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1134.744,
+        "receiveHeadersEnd": 1134.809
+      },
+      "mimeType": "application/javascript;charset=utf-8"
+    },
+    {
+      "url": "https://www.google.com.bd/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-HS9NFED03C&cid=934420418.1761563915&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&z=1181130585",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 42,
+      "time": 1761563915720,
+      "timing": {
+        "requestTime": 36911.411095,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.294,
+        "dnsEnd": 2.945,
+        "connectStart": 3.151,
+        "connectEnd": 566.053,
+        "sslStart": 185.493,
+        "sslEnd": 566.046,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 566.166,
+        "sendEnd": 566.243,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 715.673,
+        "receiveHeadersEnd": 715.735
+      },
+      "mimeType": "image/gif"
+    },
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563913456&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=934420418.1761563915&ecid=1568096090&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563914&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FBingo%2FEggHuntBingo%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3307",
+      "status": 204,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563915732,
+      "timing": {
+        "requestTime": 36911.410372,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.069,
+        "dnsEnd": 3.833,
+        "connectStart": 4.121,
+        "connectEnd": 568.333,
+        "sslStart": 186.637,
+        "sslEnd": 568.331,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 568.405,
+        "sendEnd": 568.47,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 727.667,
+        "receiveHeadersEnd": 727.77
+      },
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-HS9NFED03C&cid=934420418.1761563915&gtm=45je5am0v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~115480710~115616986~115938465~115938468~116217636~116217638",
+      "status": 204,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563915732,
+      "timing": {
+        "requestTime": 36911.410569,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.032,
+        "dnsEnd": 3.585,
+        "connectStart": 3.884,
+        "connectEnd": 568.477,
+        "sslStart": 186.265,
+        "sslEnd": 568.475,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 568.53,
+        "sendEnd": 568.587,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 727.837,
+        "receiveHeadersEnd": 727.888
+      },
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/?ProductId=ELS&Token=397261d64dd20d6a4a534df6de5bf008327a80ed9b1112b3cbd83545645fe48a6030f04ab75c06c2deaa84361efdd476&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 3197,
+      "time": 1761563916037,
+      "timing": {
+        "requestTime": 36912.059204,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.497,
+        "sendEnd": 0.571,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 382.761,
+        "receiveHeadersEnd": 382.825
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/src/settings.1a5ef.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 247,
+      "time": 1761563916384,
+      "timing": {
+        "requestTime": 36912.454929,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.655,
+        "sendEnd": 0.907,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 335.814,
+        "receiveHeadersEnd": 335.885
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/style-mobile.25fc5.css",
+      "status": 200,
+      "resourceType": "CSS",
+      "size": 1111,
+      "time": 1761563916395,
+      "timing": {
+        "requestTime": 36912.454831,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.667,
+        "sendEnd": 1.004,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 346.456,
+        "receiveHeadersEnd": 346.518
+      },
+      "mimeType": "text/css"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/main.f72e6.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 3427,
+      "time": 1761563916395,
+      "timing": {
+        "requestTime": 36912.454997,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.813,
+        "sendEnd": 0.853,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 335.973,
+        "receiveHeadersEnd": 335.999
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/cocos2d-js-min.2773f.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 616279,
+      "time": 1761563917446,
+      "timing": {
+        "requestTime": 36912.810638,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.636,
+        "sendEnd": 0.71,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 263.573,
+        "receiveHeadersEnd": 263.647
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://s.go-mpulse.net/boomerang/GHLLG-DXABY-LH7FL-6KNHY-7TNVC",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 57206,
+      "time": 1761563917773,
+      "timing": {
+        "requestTime": 36912.810518,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.349,
+        "dnsEnd": 424.161,
+        "connectStart": 424.405,
+        "connectEnd": 817.928,
+        "sslStart": 562.522,
+        "sslEnd": 817.924,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 818.042,
+        "sendEnd": 818.108,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1001.039,
+        "receiveHeadersEnd": 1001.106
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/physics-min.941a2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 61315,
+      "time": 1761563918208,
+      "timing": {
+        "requestTime": 36914.146595,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.511,
+        "sendEnd": 0.59,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 424.165,
+        "receiveHeadersEnd": 424.235
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/config.d17e2.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 867,
+      "time": 1761563918475,
+      "timing": {
+        "requestTime": 36914.62335,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.623,
+        "sendEnd": 0.855,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 257.915,
+        "receiveHeadersEnd": 257.978
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/index.d17e2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563918480,
+      "timing": {
+        "requestTime": 36914.623462,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.559,
+        "sendEnd": 0.744,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 263.487,
+        "receiveHeadersEnd": 263.528
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/config.c52c8.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 11074,
+      "time": 1761563918488,
+      "timing": {
+        "requestTime": 36914.623606,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.58,
+        "sendEnd": 0.652,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 271.21,
+        "receiveHeadersEnd": 271.245
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/index.c52c8.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563918488,
+      "timing": {
+        "requestTime": 36914.623687,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.531,
+        "sendEnd": 0.572,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 270.864,
+        "receiveHeadersEnd": 270.916
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/config.af2d2.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 1527,
+      "time": 1761563918748,
+      "timing": {
+        "requestTime": 36914.905907,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.545,
+        "sendEnd": 0.693,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 249.085,
+        "receiveHeadersEnd": 249.148
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://c.go-mpulse.net/api/config.json?key=GHLLG-DXABY-LH7FL-6KNHY-7TNVC&d=www.shuangzi6688.com&t=5871880&v=1.720.0&sl=0&si=a8191237-55fa-4247-9f67-6c5c76ccb3e3-t4sff0&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022461",
+      "status": 204,
+      "resourceType": "JSON",
+      "size": 0,
+      "time": 1761563918836,
+      "timing": {
+        "requestTime": 36914.151552,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.179,
+        "dnsEnd": 1.85,
+        "connectStart": 1.984,
+        "connectEnd": 574.799,
+        "sslStart": 344.859,
+        "sslEnd": 574.795,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 574.9,
+        "sendEnd": 574.974,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1091.695,
+        "receiveHeadersEnd": 1091.756
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/favicon-96x96.92e00.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 9016,
+      "time": 1761563918920,
+      "timing": {
+        "requestTime": 36914.896793,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.482,
+        "sendEnd": 0.565,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 430.252,
+        "receiveHeadersEnd": 430.304
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/index.af2d2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 398797,
+      "time": 1761563918922,
+      "timing": {
+        "requestTime": 36914.906011,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.506,
+        "sendEnd": 0.59,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 249.206,
+        "receiveHeadersEnd": 249.241
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/import/0b/0b6c4470e.9537f.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 16450,
+      "time": 1761563919427,
+      "timing": {
+        "requestTime": 36915.394525,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.689,
+        "sendEnd": 0.771,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 439.103,
+        "receiveHeadersEnd": 439.17
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/native/02/0275e94c-56a7-410f-bd1a-fc7483f7d14a.cea68.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 82,
+      "time": 1761563919861,
+      "timing": {
+        "requestTime": 36915.857065,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.615,
+        "sendEnd": 0.823,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 410.445,
+        "receiveHeadersEnd": 410.552
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/internal/native/60/600301aa-3357-4a10-b086-84f011fa32ba.c3a3a.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 7518,
+      "time": 1761563919862,
+      "timing": {
+        "requestTime": 36915.857364,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.502,
+        "sendEnd": 0.541,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 410.494,
+        "receiveHeadersEnd": 410.519
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/main/import/07/0784d655b.c6526.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 695,
+      "time": 1761563920131,
+      "timing": {
+        "requestTime": 36916.283513,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.55,
+        "sendEnd": 0.632,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 254.518,
+        "receiveHeadersEnd": 254.582
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/0e/0ee4ddacb.2a423.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 102,
+      "time": 1761563920415,
+      "timing": {
+        "requestTime": 36916.544687,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.498,
+        "sendEnd": 0.575,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 276.696,
+        "receiveHeadersEnd": 276.77
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/44/44eeecda-e781-42ac-9b51-889629ed64f4.e2711.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 704152,
+      "time": 1761563920747,
+      "timing": {
+        "requestTime": 36916.822805,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.557,
+        "sendEnd": 0.643,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 331.214,
+        "receiveHeadersEnd": 331.276
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/08/083870200.c3edc.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 688,
+      "time": 1761563921197,
+      "timing": {
+        "requestTime": 36917.382669,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.534,
+        "sendEnd": 0.629,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 220.42,
+        "receiveHeadersEnd": 220.482
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/bingoconfig.json?ver=prod-1.0.6",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 108,
+      "time": 1761563921565,
+      "timing": {
+        "requestTime": 36917.606252,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.464,
+        "sendEnd": 0.532,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 365.724,
+        "receiveHeadersEnd": 365.773
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/globalConfig.json?ver=1761563921565",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 1390,
+      "time": 1761563923181,
+      "timing": {
+        "requestTime": 36917.973361,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.221,
+        "dnsEnd": 197.136,
+        "connectStart": 197.168,
+        "connectEnd": 917.527,
+        "sslStart": 339.717,
+        "sslEnd": 917.522,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 917.707,
+        "sendEnd": 917.78,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1613.661,
+        "receiveHeadersEnd": 1613.741
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/game-sdk-common.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 20553,
+      "time": 1761563923503,
+      "timing": {
+        "requestTime": 36919.588577,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.456,
+        "sendEnd": 0.559,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 238.477,
+        "receiveHeadersEnd": 238.544
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/md5.txt?ver=1761563923505",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 26,
+      "time": 1761563923877,
+      "timing": {
+        "requestTime": 36919.912941,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.524,
+        "sendEnd": 0.635,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 370.427,
+        "receiveHeadersEnd": 370.499
+      },
+      "mimeType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/index.22c7a.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563924112,
+      "timing": {
+        "requestTime": 36920.285121,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.43,
+        "sendEnd": 0.51,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 233.408,
+        "receiveHeadersEnd": 233.474
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/config.22c7a.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 271440,
+      "time": 1761563924120,
+      "timing": {
+        "requestTime": 36920.28502,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.489,
+        "sendEnd": 0.61,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 241.267,
+        "receiveHeadersEnd": 241.334
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/i18n/bingo-common/en-US.json?v=1761563924600",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 2441,
+      "time": 1761563924960,
+      "timing": {
+        "requestTime": 36921.008684,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.745,
+        "sendEnd": 0.869,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 358.453,
+        "receiveHeadersEnd": 358.514
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/i18n/bonus-bingo/en-US.json?v=1761563924601",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 233,
+      "time": 1761563925243,
+      "timing": {
+        "requestTime": 36921.008958,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.52,
+        "sendEnd": 0.595,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 640.258,
+        "receiveHeadersEnd": 640.332
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/import/0e/0e829f30a.6ed78.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 983,
+      "time": 1761563925530,
+      "timing": {
+        "requestTime": 36921.651809,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.573,
+        "sendEnd": 0.661,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 284.377,
+        "receiveHeadersEnd": 284.441
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/import/0a/0aa827e61.08ba0.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 357,
+      "time": 1761563925807,
+      "timing": {
+        "requestTime": 36921.937609,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.417,
+        "sendEnd": 0.484,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 276.1,
+        "receiveHeadersEnd": 276.188
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://resource.shuangtzu6688.com/bundle/Bundle_i18n/native/eb/eb7783d7-aa32-4f30-967e-f0878b5c07c6.5e413.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 19393,
+      "time": 1761563926083,
+      "timing": {
+        "requestTime": 36922.215676,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.473,
+        "sendEnd": 0.535,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 274.14,
+        "receiveHeadersEnd": 274.201
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/import/0b/0b259dd38.f1f97.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 1946,
+      "time": 1761563926370,
+      "timing": {
+        "requestTime": 36922.515547,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.647,
+        "sendEnd": 0.725,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 260.819,
+        "receiveHeadersEnd": 260.885
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/c0/c00caa2b-42e4-4461-8328-e8f91e9b38ea.c6812.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 187684,
+      "time": 1761563926625,
+      "timing": {
+        "requestTime": 36922.778729,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.668,
+        "sendEnd": 0.788,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 253.123,
+        "receiveHeadersEnd": 253.183
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/EggHuntBingo/assets/resources/native/8f/8f1143a4-69c6-4225-a614-732691baf10c.64841.mp3",
+      "status": 200,
+      "resourceType": "Audio",
+      "size": 7896,
+      "time": 1761563926812,
+      "timing": {
+        "requestTime": 36922.778943,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.505,
+        "sendEnd": 0.575,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 439.348,
+        "receiveHeadersEnd": 439.408
+      },
+      "mimeType": "audio/mpeg"
+    }
+  ]
+}

@@ -1,0 +1,921 @@
+{
+  "url": "https://www.shuangzi6688.com/Bingo/ArcadeBingo/?Lang=en-US&ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c",
+  "timestamp": "2025-10-27T11:07:20.608Z",
+  "totalTime": 12269,
+  "navigationTime": 2268,
+  "totalRequests": 25,
+  "totalSize": 1268320,
+  "failedRequests": [
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/?ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c&Lang=en-US",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563229001
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-HS9NFED03C&cx=c&gtm=4e5am0",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563229059
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563229061
+    }
+  ],
+  "byType": {
+    "Other": {
+      "count": 6,
+      "size": 62155,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/Bingo/ArcadeBingo/?Lang=en-US&ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c",
+          "size": 227,
+          "status": 200
+        },
+        {
+          "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+          "size": 699,
+          "status": 200
+        },
+        {
+          "url": "https://ds-r.geminiservice.cc/domains?type=Bingo",
+          "size": 105,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/?ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c&Lang=en-US",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/?ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c&Lang=en-US",
+          "size": 3193,
+          "status": 200
+        },
+        {
+          "url": "https://s.go-mpulse.net/boomerang/GHLLG-DXABY-LH7FL-6KNHY-7TNVC",
+          "size": 57931,
+          "status": 200
+        }
+      ]
+    },
+    "JavaScript": {
+      "count": 11,
+      "size": 1183138,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+          "size": 2159,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+          "size": 907,
+          "status": 200
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+          "size": 107480,
+          "status": 200
+        },
+        {
+          "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/main.bf742.js",
+          "size": 3428,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/src/settings.092d8.js",
+          "size": 247,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/cocos2d-js-min.2773f.js",
+          "size": 616279,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/physics-min.941a2.js",
+          "size": 61315,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/internal/index.d17e2.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/resources/index.a38a9.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/main/index.6e22c.js",
+          "size": 390755,
+          "status": 200
+        }
+      ]
+    },
+    "JSON": {
+      "count": 5,
+      "size": 12783,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/config.json",
+          "size": 255,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/internal/config.d17e2.json",
+          "size": 867,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/resources/config.a38a9.json",
+          "size": 10126,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/main/config.6e22c.json",
+          "size": 1535,
+          "status": 200
+        },
+        {
+          "url": "https://c.go-mpulse.net/api/config.json?key=GHLLG-DXABY-LH7FL-6KNHY-7TNVC&d=www.shuangzi6688.com&t=5871877&v=1.720.0&sl=0&si=f3726a47-1d9d-4edf-933d-c1864eeaccd7-t4sevx&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022461",
+          "size": 0,
+          "status": 204
+        }
+      ]
+    },
+    "HTML": {
+      "count": 1,
+      "size": 117,
+      "urls": [
+        {
+          "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+          "size": 117,
+          "status": 200
+        }
+      ]
+    },
+    "CSS": {
+      "count": 1,
+      "size": 1111,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/style-mobile.25fc5.css",
+          "size": 1111,
+          "status": 200
+        }
+      ]
+    },
+    "Image": {
+      "count": 1,
+      "size": 9016,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/ArcadeBingo/favicon-96x96.92e00.png",
+          "size": 9016,
+          "status": 200
+        }
+      ]
+    }
+  },
+  "allResponses": [
+    {
+      "url": "https://www.shuangzi6688.com/Bingo/ArcadeBingo/?Lang=en-US&ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 227,
+      "time": 1761563228555,
+      "timing": {
+        "requestTime": 36224.909167,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0,
+        "dnsEnd": 30.356,
+        "connectStart": 30.38,
+        "connectEnd": 103.716,
+        "sslStart": 58.729,
+        "sslEnd": 103.712,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 103.851,
+        "sendEnd": 104.051,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 157.129,
+        "receiveHeadersEnd": 157.207
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 2159,
+      "time": 1761563228602,
+      "timing": {
+        "requestTime": 36225.071829,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.701,
+        "sendEnd": 0.886,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 41.454,
+        "receiveHeadersEnd": 41.529
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 907,
+      "time": 1761563228603,
+      "timing": {
+        "requestTime": 36225.071983,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.63,
+        "sendEnd": 0.733,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 42.246,
+        "receiveHeadersEnd": 42.275
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/config.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 255,
+      "time": 1761563228651,
+      "timing": {
+        "requestTime": 36225.117881,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.858,
+        "sendEnd": 0.931,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 35.377,
+        "receiveHeadersEnd": 35.438
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 699,
+      "time": 1761563228872,
+      "timing": {
+        "requestTime": 36225.117606,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.329,
+        "dnsEnd": 41.572,
+        "connectStart": 41.586,
+        "connectEnd": 187.477,
+        "sslStart": 105.449,
+        "sslEnd": 187.474,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 187.543,
+        "sendEnd": 187.576,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 265.133,
+        "receiveHeadersEnd": 265.179
+      },
+      "mimeType": "application/x-javascript"
+    },
+    {
+      "url": "https://ds-r.geminiservice.cc/domains?type=Bingo",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 105,
+      "time": 1761563228904,
+      "timing": {
+        "requestTime": 36225.159942,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.245,
+        "dnsEnd": 35.49,
+        "connectStart": 35.514,
+        "connectEnd": 191.027,
+        "sslStart": 84.577,
+        "sslEnd": 191.022,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 191.135,
+        "sendEnd": 191.212,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 256.16,
+        "receiveHeadersEnd": 256.23
+      },
+      "mimeType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "HTML",
+      "size": 117,
+      "time": 1761563228946,
+      "timing": {
+        "requestTime": 36225.162492,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.269,
+        "dnsEnd": 38.832,
+        "connectStart": 38.837,
+        "connectEnd": 135.134,
+        "sslStart": 76.579,
+        "sslEnd": 135.129,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 135.252,
+        "sendEnd": 135.362,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 295.662,
+        "receiveHeadersEnd": 295.709
+      },
+      "mimeType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/?ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563228954,
+      "timing": {
+        "requestTime": 36225.417397,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.248,
+        "sendEnd": 0.337,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 45.055,
+        "receiveHeadersEnd": 45.09
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 107480,
+      "time": 1761563229001,
+      "timing": {
+        "requestTime": 36225.116628,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.397,
+        "dnsEnd": 30.268,
+        "connectStart": 30.268,
+        "connectEnd": 140.754,
+        "sslStart": 68.717,
+        "sslEnd": 140.749,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 140.873,
+        "sendEnd": 140.952,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 233.594,
+        "receiveHeadersEnd": 233.676
+      },
+      "mimeType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/?ProductId=ELS&Token=0f83b15f78d4f94dca9728c07e5a037dbbb593ae5807ed60f373667fc6719645a2c6f174a149762fc565539dd8441b5c&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 3193,
+      "time": 1761563229054,
+      "timing": {
+        "requestTime": 36225.512353,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.548,
+        "sendEnd": 0.686,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 53.101,
+        "receiveHeadersEnd": 53.156
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 0,
+      "time": 1761563229057,
+      "timing": {
+        "requestTime": 36225.385095,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.516,
+        "dnsEnd": 36.835,
+        "connectStart": 36.852,
+        "connectEnd": 130.028,
+        "sslStart": 57.1,
+        "sslEnd": 130.025,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 130.135,
+        "sendEnd": 130.2,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 171.69,
+        "receiveHeadersEnd": 171.771
+      },
+      "mimeType": "application/javascript;charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/style-mobile.25fc5.css",
+      "status": 200,
+      "resourceType": "CSS",
+      "size": 1111,
+      "time": 1761563229109,
+      "timing": {
+        "requestTime": 36225.573389,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.836,
+        "sendEnd": 1.148,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 47.479,
+        "receiveHeadersEnd": 47.552
+      },
+      "mimeType": "text/css"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/main.bf742.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 3428,
+      "time": 1761563229113,
+      "timing": {
+        "requestTime": 36225.573736,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.771,
+        "sendEnd": 0.819,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 48.862,
+        "receiveHeadersEnd": 48.908
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/src/settings.092d8.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 247,
+      "time": 1761563229131,
+      "timing": {
+        "requestTime": 36225.573543,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.781,
+        "sendEnd": 0.994,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 69.449,
+        "receiveHeadersEnd": 69.513
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/cocos2d-js-min.2773f.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 616279,
+      "time": 1761563229327,
+      "timing": {
+        "requestTime": 36225.644334,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.439,
+        "sendEnd": 0.495,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 30.997,
+        "receiveHeadersEnd": 31.06
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://s.go-mpulse.net/boomerang/GHLLG-DXABY-LH7FL-6KNHY-7TNVC",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 57931,
+      "time": 1761563229646,
+      "timing": {
+        "requestTime": 36225.624261,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.565,
+        "dnsEnd": 44.938,
+        "connectStart": 44.959,
+        "connectEnd": 212.948,
+        "sslStart": 126.828,
+        "sslEnd": 212.943,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 213.054,
+        "sendEnd": 213.126,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 296.199,
+        "receiveHeadersEnd": 296.256
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/physics-min.941a2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 61315,
+      "time": 1761563229708,
+      "timing": {
+        "requestTime": 36226.156798,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1.699,
+        "sendEnd": 1.874,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 53.678,
+        "receiveHeadersEnd": 53.752
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/internal/config.d17e2.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 867,
+      "time": 1761563229755,
+      "timing": {
+        "requestTime": 36226.228131,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.606,
+        "sendEnd": 0.844,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 38.971,
+        "receiveHeadersEnd": 39.057
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/internal/index.d17e2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563229761,
+      "timing": {
+        "requestTime": 36226.228301,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.479,
+        "sendEnd": 0.675,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 44.464,
+        "receiveHeadersEnd": 44.537
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/resources/config.a38a9.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 10126,
+      "time": 1761563229763,
+      "timing": {
+        "requestTime": 36226.228381,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.578,
+        "sendEnd": 0.644,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 46.743,
+        "receiveHeadersEnd": 46.788
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/resources/index.a38a9.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563229763,
+      "timing": {
+        "requestTime": 36226.228466,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.522,
+        "sendEnd": 0.559,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 44.557,
+        "receiveHeadersEnd": 44.606
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/main/config.6e22c.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 1535,
+      "time": 1761563229808,
+      "timing": {
+        "requestTime": 36226.277265,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.486,
+        "sendEnd": 0.627,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 42.298,
+        "receiveHeadersEnd": 42.367
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/assets/main/index.6e22c.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 390755,
+      "time": 1761563229844,
+      "timing": {
+        "requestTime": 36226.277369,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.425,
+        "sendEnd": 0.523,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 48.068,
+        "receiveHeadersEnd": 48.12
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/ArcadeBingo/favicon-96x96.92e00.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 9016,
+      "time": 1761563229933,
+      "timing": {
+        "requestTime": 36226.412404,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.462,
+        "sendEnd": 0.536,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 32.7,
+        "receiveHeadersEnd": 32.762
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://c.go-mpulse.net/api/config.json?key=GHLLG-DXABY-LH7FL-6KNHY-7TNVC&d=www.shuangzi6688.com&t=5871877&v=1.720.0&sl=0&si=f3726a47-1d9d-4edf-933d-c1864eeaccd7-t4sevx&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022461",
+      "status": 204,
+      "resourceType": "JSON",
+      "size": 0,
+      "time": 1761563230099,
+      "timing": {
+        "requestTime": 36226.162253,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 1.038,
+        "dnsEnd": 30.871,
+        "connectStart": 30.871,
+        "connectEnd": 134.112,
+        "sslStart": 73.488,
+        "sslEnd": 134.107,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 134.216,
+        "sendEnd": 134.282,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 449.132,
+        "receiveHeadersEnd": 449.204
+      },
+      "mimeType": "application/json"
+    }
+  ]
+}

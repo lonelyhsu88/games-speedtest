@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini | 404 Error</title>
+    <style>
+      body {
+        background-color: #000;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        /* max-width: 1280px; */
+        margin: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <picture>
+      <source srcset="https://uts7rai5u7vv0q08.elsgame.cc/assets/mh5_404.png" media="(orientation: portrait)" />
+      <img src="https://uts7rai5u7vv0q08.elsgame.cc/assets/h5_404.png" alt="404 error" />
+    </picture>
+  </body>
+</html>

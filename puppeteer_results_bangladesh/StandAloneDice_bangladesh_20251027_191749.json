@@ -1,0 +1,1377 @@
+{
+  "url": "https://www.shuangzi6688.com/Hash/StandAloneDice/?Lang=en-US&ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8",
+  "timestamp": "2025-10-27T11:18:07.779Z",
+  "totalTime": 16351,
+  "navigationTime": 6349,
+  "totalRequests": 38,
+  "totalSize": 1552013,
+  "failedRequests": [
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563873176&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=548050884.1761563875&ecid=1463164466&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563875&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FHash%2FStandAloneDice%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3540",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563875697
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&Lang=en-US",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563876018
+    },
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am1h2v9209392845za200zb9209385929zd9209385929&_p=1761563873176&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=548050884.1761563875&ecid=1463164466&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_eu=AAAAAAQ&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563875&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FHash%2FStandAloneDice%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&dt=&en=user_engagement&_et=1844&tfd=5386",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563876870
+    },
+    {
+      "url": "https://z.clarity.ms/collect",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563876870
+    },
+    {
+      "url": "https://z.clarity.ms/collect",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "time": 1761563876870
+    }
+  ],
+  "byType": {
+    "Other": {
+      "count": 10,
+      "size": 198272,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/Hash/StandAloneDice/?Lang=en-US&ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8",
+          "size": 227,
+          "status": 200
+        },
+        {
+          "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+          "size": 699,
+          "status": 200
+        },
+        {
+          "url": "https://ds-r.geminiservice.cc/domains?type=Hash",
+          "size": 109,
+          "status": 200
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-HS9NFED03C&cx=c&gtm=4e5am1h2",
+          "size": 136806,
+          "status": 200
+        },
+        {
+          "url": "https://www.google.com.bd/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-HS9NFED03C&cid=548050884.1761563875&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&z=1478242911",
+          "size": 42,
+          "status": 200
+        },
+        {
+          "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563873176&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=548050884.1761563875&ecid=1463164466&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563875&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FHash%2FStandAloneDice%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3540",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-HS9NFED03C&cid=548050884.1761563875&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&Lang=en-US",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&Lang=en-US",
+          "size": 3183,
+          "status": 200
+        },
+        {
+          "url": "https://s.go-mpulse.net/boomerang/52EN4-PFEYY-L4RH2-822HZ-XLQJY",
+          "size": 57206,
+          "status": 200
+        }
+      ]
+    },
+    "JavaScript": {
+      "count": 10,
+      "size": 1248656,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+          "size": 2159,
+          "status": 200
+        },
+        {
+          "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+          "size": 907,
+          "status": 200
+        },
+        {
+          "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+          "size": 107482,
+          "status": 200
+        },
+        {
+          "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+          "size": 0,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/main.948df.js",
+          "size": 1469,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/src/settings.d3a0b.js",
+          "size": 247,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/cocos2d-js-min.ead85.js",
+          "size": 573624,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/index.0884e.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/index.d0832.js",
+          "size": 284,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/index.f4a9c.js",
+          "size": 562200,
+          "status": 200
+        }
+      ]
+    },
+    "JSON": {
+      "count": 10,
+      "size": 20270,
+      "urls": [
+        {
+          "url": "https://www.shuangzi6688.com/config.json",
+          "size": 255,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/config.d0832.json",
+          "size": 779,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/config.0884e.json",
+          "size": 4664,
+          "status": 200
+        },
+        {
+          "url": "https://c.go-mpulse.net/api/config.json?key=52EN4-PFEYY-L4RH2-822HZ-XLQJY&d=hash.shuangzi6688.com&t=5871880&v=1.720.0&sl=0&si=c44f9b38-5569-4011-8fcb-11c6ba33be2f-t4sfdw&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022565",
+          "size": 0,
+          "status": 204
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/config.f4a9c.json",
+          "size": 4695,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/import/09/0967b326a.1f618.json",
+          "size": 8205,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/import/72/72e22729-6c0b-40a9-a636-b51862a2aac9.fe170.json",
+          "size": 691,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/f0/f02bee4e-cc6d-411d-825f-a14d5db90426.51938.json",
+          "size": 165,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/0e/0ea5c423c.013bd.json",
+          "size": 86,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/0d/0dd26a93c.e1fe0.json",
+          "size": 730,
+          "status": 200
+        }
+      ]
+    },
+    "HTML": {
+      "count": 1,
+      "size": 117,
+      "urls": [
+        {
+          "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+          "size": 117,
+          "status": 200
+        }
+      ]
+    },
+    "Image": {
+      "count": 6,
+      "size": 83587,
+      "urls": [
+        {
+          "url": "https://c.clarity.ms/c.gif",
+          "size": 0,
+          "status": 302
+        },
+        {
+          "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=056DDE53698F42B2BA40FC32C02F0D7D&RedC=c.clarity.ms&MXFR=11A5F150132D67DC257FE7C2172D699E",
+          "size": 0,
+          "status": 302
+        },
+        {
+          "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=056DDE53698F42B2BA40FC32C02F0D7D&MUID=05CEA03249C860F0314AB6A0488D615D",
+          "size": 42,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/favicon-96x96.92e00.png",
+          "size": 9016,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/native/02/0275e94c-56a7-410f-bd1a-fc7483f7d14a.cea68.png",
+          "size": 82,
+          "status": 200
+        },
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/native/d0/d0f137a1-59a2-4fc0-8457-a8e3c354f9fb.00afa.png",
+          "size": 74447,
+          "status": 200
+        }
+      ]
+    },
+    "CSS": {
+      "count": 1,
+      "size": 1111,
+      "urls": [
+        {
+          "url": "https://hash.shuangzi6688.com/StandAloneDice/style-mobile.25fc5.css",
+          "size": 1111,
+          "status": 200
+        }
+      ]
+    }
+  },
+  "allResponses": [
+    {
+      "url": "https://www.shuangzi6688.com/Hash/StandAloneDice/?Lang=en-US&ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 227,
+      "time": 1761563872743,
+      "timing": {
+        "requestTime": 36867.893611,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0,
+        "dnsEnd": 294.463,
+        "connectStart": 294.49,
+        "connectEnd": 760.293,
+        "sslStart": 440.277,
+        "sslEnd": 760.289,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 760.632,
+        "sendEnd": 760.887,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1255.647,
+        "receiveHeadersEnd": 1255.781
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/check_example-DBI48XH2.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 2159,
+      "time": 1761563873124,
+      "timing": {
+        "requestTime": 36869.159797,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 4.76,
+        "sendEnd": 4.897,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 349.169,
+        "receiveHeadersEnd": 349.241
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/assets/Error-t0OlWNc8.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 907,
+      "time": 1761563873124,
+      "timing": {
+        "requestTime": 36869.159913,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 4.695,
+        "sendEnd": 4.782,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 353.178,
+        "receiveHeadersEnd": 353.216
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://www.shuangzi6688.com/config.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 255,
+      "time": 1761563873460,
+      "timing": {
+        "requestTime": 36869.634569,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.419,
+        "sendEnd": 0.497,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 221.514,
+        "receiveHeadersEnd": 221.588
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://www.googletagmanager.com/ns.html?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "HTML",
+      "size": 117,
+      "time": 1761563873881,
+      "timing": {
+        "requestTime": 36869.677603,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.452,
+        "dnsEnd": 98.65,
+        "connectStart": 98.824,
+        "connectEnd": 430.217,
+        "sslStart": 238.484,
+        "sslEnd": 430.213,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 430.655,
+        "sendEnd": 430.73,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 609.993,
+        "receiveHeadersEnd": 610.065
+      },
+      "mimeType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.clarity.ms/tag/tiqwucswa4?ref=npm",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 699,
+      "time": 1761563874142,
+      "timing": {
+        "requestTime": 36869.627165,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.315,
+        "dnsEnd": 302.658,
+        "connectStart": 302.684,
+        "connectEnd": 662.088,
+        "sslStart": 480.724,
+        "sslEnd": 662.083,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 662.171,
+        "sendEnd": 662.247,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 916.793,
+        "receiveHeadersEnd": 916.841
+      },
+      "mimeType": "application/x-javascript"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-M72CW974",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 107482,
+      "time": 1761563874461,
+      "timing": {
+        "requestTime": 36869.599518,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.303,
+        "dnsEnd": 176.801,
+        "connectStart": 176.957,
+        "connectEnd": 518.65,
+        "sslStart": 316.725,
+        "sslEnd": 518.644,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 518.764,
+        "sendEnd": 519.035,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 707.905,
+        "receiveHeadersEnd": 707.982
+      },
+      "mimeType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://ds-r.geminiservice.cc/domains?type=Hash",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 109,
+      "time": 1761563874566,
+      "timing": {
+        "requestTime": 36869.876137,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.257,
+        "dnsEnd": 157.761,
+        "connectStart": 157.954,
+        "connectEnd": 682.251,
+        "sslStart": 303.96,
+        "sslEnd": 682.247,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 682.354,
+        "sendEnd": 682.461,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1096.295,
+        "receiveHeadersEnd": 1096.38
+      },
+      "mimeType": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-HS9NFED03C&cx=c&gtm=4e5am1h2",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 136806,
+      "time": 1761563874996,
+      "timing": {
+        "requestTime": 36870.892352,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.565,
+        "sendEnd": 0.7,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 196.352,
+        "receiveHeadersEnd": 196.447
+      },
+      "mimeType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif",
+      "status": 302,
+      "resourceType": "Image",
+      "size": 0,
+      "time": 1761563875357,
+      "timing": {
+        "requestTime": 36870.550996,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.196,
+        "dnsEnd": 287.659,
+        "connectStart": 287.822,
+        "connectEnd": 1001.466,
+        "sslStart": 496.033,
+        "sslEnd": 1001.463,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1001.537,
+        "sendEnd": 1001.593,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1208.87,
+        "receiveHeadersEnd": 1208.953
+      },
+      "mimeType": "unknown"
+    },
+    {
+      "url": "https://scripts.clarity.ms/0.8.38/clarity.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 0,
+      "time": 1761563875463,
+      "timing": {
+        "requestTime": 36870.549217,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.365,
+        "dnsEnd": 224.019,
+        "connectStart": 224.273,
+        "connectEnd": 987.707,
+        "sslStart": 487.452,
+        "sslEnd": 987.703,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 987.869,
+        "sendEnd": 987.93,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1281.775,
+        "receiveHeadersEnd": 1281.847
+      },
+      "mimeType": "application/javascript;charset=utf-8"
+    },
+    {
+      "url": "https://www.google.com.bd/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-HS9NFED03C&cid=548050884.1761563875&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&z=1478242911",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 42,
+      "time": 1761563875643,
+      "timing": {
+        "requestTime": 36871.44483,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.275,
+        "dnsEnd": 148.53,
+        "connectStart": 148.665,
+        "connectEnd": 450.993,
+        "sslStart": 288.453,
+        "sslEnd": 450.989,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 451.115,
+        "sendEnd": 451.189,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 604.138,
+        "receiveHeadersEnd": 604.208
+      },
+      "mimeType": "image/gif"
+    },
+    {
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-HS9NFED03C&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&_p=1761563873176&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=548050884.1761563875&ecid=1463164466&ul=en-us&sr=800x600&uaa=arm&uab=64&uafvl=Chromium%3B141.0.7390.122%7CNot%253FA_Brand%3B8.0.0.0&uamb=0&uam=&uap=macOS&uapv=15.7.1&uaw=0&are=1&frm=0&pscdl=&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638&sid=1761563875&sct=1&seg=0&dl=https%3A%2F%2Fwww.shuangzi6688.com%2FHash%2FStandAloneDice%2F%3FLang%3Den-US%26ProductId%3DELS%26Token%3D868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&dt=&en=page_view&_fv=1&_nsi=1&_ss=1&tfd=3540",
+      "status": 204,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563875696,
+      "timing": {
+        "requestTime": 36871.444116,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.194,
+        "dnsEnd": 156.405,
+        "connectStart": 156.569,
+        "connectEnd": 517.498,
+        "sslStart": 297.703,
+        "sslEnd": 517.494,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 517.611,
+        "sendEnd": 517.694,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 658.782,
+        "receiveHeadersEnd": 658.919
+      },
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://stats.g.doubleclick.net/g/collect?v=2&tid=G-HS9NFED03C&cid=548050884.1761563875&gtm=45je5am1h2v9209392845z89209385929za200zb9209385929zd9209385929&aip=1&dma=0&gcd=13l3l3l3l1l1&npa=0&frm=0&tag_exp=101509157~103116026~103200004~103233427~104527906~104528501~104684208~104684211~104948813~105322304~115480710~115616986~115938465~115938468~116217636~116217638",
+      "status": 204,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563875721,
+      "timing": {
+        "requestTime": 36871.444404,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.037,
+        "dnsEnd": 157.359,
+        "connectStart": 157.517,
+        "connectEnd": 530.806,
+        "sslStart": 297.576,
+        "sslEnd": 530.804,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 530.877,
+        "sendEnd": 530.935,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 683.119,
+        "receiveHeadersEnd": 683.214
+      },
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 0,
+      "time": 1761563875968,
+      "timing": {
+        "requestTime": 36870.975584,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.048,
+        "dnsEnd": 563.628,
+        "connectStart": 563.645,
+        "connectEnd": 1036.152,
+        "sslStart": 701.254,
+        "sslEnd": 1036.147,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1036.253,
+        "sendEnd": 1036.329,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1395.616,
+        "receiveHeadersEnd": 1395.704
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=056DDE53698F42B2BA40FC32C02F0D7D&RedC=c.clarity.ms&MXFR=11A5F150132D67DC257FE7C2172D699E",
+      "status": 302,
+      "resourceType": "Image",
+      "size": 0,
+      "time": 1761563876236,
+      "timing": {
+        "requestTime": 36871.763584,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.427,
+        "dnsEnd": 169.33,
+        "connectStart": 169.516,
+        "connectEnd": 663.938,
+        "sslStart": 291.357,
+        "sslEnd": 663.933,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 664.097,
+        "sendEnd": 664.193,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 878.901,
+        "receiveHeadersEnd": 878.98
+      },
+      "mimeType": "unknown"
+    },
+    {
+      "url": "https://c.clarity.ms/c.gif?ctsa=mr&CtsSyncId=056DDE53698F42B2BA40FC32C02F0D7D&MUID=05CEA03249C860F0314AB6A0488D615D",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 42,
+      "time": 1761563876463,
+      "timing": {
+        "requestTime": 36872.643163,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.308,
+        "sendEnd": 0.369,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 224.892,
+        "receiveHeadersEnd": 224.968
+      },
+      "mimeType": "image/gif"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/?ProductId=ELS&Token=868b6933a94a46906338ed0dc68d64cb3a3aa541b758b4b547733bed1f07aefd99f0f085d0c95ade6487d201793a95e8&Lang=en-US",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 3183,
+      "time": 1761563876860,
+      "timing": {
+        "requestTime": 36872.425005,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.439,
+        "dnsEnd": 0.444,
+        "connectStart": 0.553,
+        "connectEnd": 467.506,
+        "sslStart": 139.641,
+        "sslEnd": 467.502,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 467.614,
+        "sendEnd": 467.711,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 841.96,
+        "receiveHeadersEnd": 842.032
+      },
+      "mimeType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/main.948df.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 1469,
+      "time": 1761563877136,
+      "timing": {
+        "requestTime": 36873.288493,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.325,
+        "sendEnd": 0.366,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 250.689,
+        "receiveHeadersEnd": 250.767
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/src/settings.d3a0b.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 247,
+      "time": 1761563877140,
+      "timing": {
+        "requestTime": 36873.288398,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.327,
+        "sendEnd": 0.4,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 258.517,
+        "receiveHeadersEnd": 258.585
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/style-mobile.25fc5.css",
+      "status": 200,
+      "resourceType": "CSS",
+      "size": 1111,
+      "time": 1761563877156,
+      "timing": {
+        "requestTime": 36873.288214,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.403,
+        "sendEnd": 0.496,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 274.255,
+        "receiveHeadersEnd": 274.335
+      },
+      "mimeType": "text/css"
+    },
+    {
+      "url": "https://s.go-mpulse.net/boomerang/52EN4-PFEYY-L4RH2-822HZ-XLQJY",
+      "status": 200,
+      "resourceType": "Other",
+      "size": 57206,
+      "time": 1761563878436,
+      "timing": {
+        "requestTime": 36873.569082,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.282,
+        "dnsEnd": 194.656,
+        "connectStart": 194.855,
+        "connectEnd": 740.711,
+        "sslStart": 440.966,
+        "sslEnd": 740.707,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 740.814,
+        "sendEnd": 740.902,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 952.87,
+        "receiveHeadersEnd": 952.93
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/cocos2d-js-min.ead85.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 573624,
+      "time": 1761563879486,
+      "timing": {
+        "requestTime": 36873.569662,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.316,
+        "sendEnd": 0.4,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 251.513,
+        "receiveHeadersEnd": 251.581
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/config.d0832.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 779,
+      "time": 1761563880204,
+      "timing": {
+        "requestTime": 36876.271686,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.524,
+        "sendEnd": 0.728,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 338.44,
+        "receiveHeadersEnd": 338.507
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/index.0884e.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563880204,
+      "timing": {
+        "requestTime": 36876.272537,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.231,
+        "sendEnd": 0.302,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 337.804,
+        "receiveHeadersEnd": 337.829
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/config.0884e.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 4664,
+      "time": 1761563880213,
+      "timing": {
+        "requestTime": 36876.272039,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.407,
+        "sendEnd": 0.438,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 348.518,
+        "receiveHeadersEnd": 348.563
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/index.d0832.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 284,
+      "time": 1761563880214,
+      "timing": {
+        "requestTime": 36876.27195,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.432,
+        "sendEnd": 0.514,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 348.339,
+        "receiveHeadersEnd": 348.392
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://c.go-mpulse.net/api/config.json?key=52EN4-PFEYY-L4RH2-822HZ-XLQJY&d=hash.shuangzi6688.com&t=5871880&v=1.720.0&sl=0&si=c44f9b38-5569-4011-8fcb-11c6ba33be2f-t4sfdw&plugins=AK,ConfigOverride,Continuity,PageParams,IFrameDelay,AutoXHR,SPA,History,Angular,Backbone,Ember,RT,CrossDomain,BW,PaintTiming,NavigationTiming,ResourceTiming,Memory,CACHE_RELOAD,Errors,TPAnalytics,UserTiming,Akamai,Early,EventTiming,LOGN&acao=&ak.ai=1022565",
+      "status": 204,
+      "resourceType": "JSON",
+      "size": 0,
+      "time": 1761563880244,
+      "timing": {
+        "requestTime": 36874.850506,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": 0.227,
+        "dnsEnd": 318.254,
+        "connectStart": 318.446,
+        "connectEnd": 1300.76,
+        "sslStart": 1031.606,
+        "sslEnd": 1300.755,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 1300.877,
+        "sendEnd": 1300.954,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 1800.062,
+        "receiveHeadersEnd": 1800.126
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/favicon-96x96.92e00.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 9016,
+      "time": 1761563880534,
+      "timing": {
+        "requestTime": 36876.623197,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.286,
+        "sendEnd": 0.364,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 317.668,
+        "receiveHeadersEnd": 317.734
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/config.f4a9c.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 4695,
+      "time": 1761563880569,
+      "timing": {
+        "requestTime": 36876.632173,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.415,
+        "sendEnd": 0.53,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 343.153,
+        "receiveHeadersEnd": 343.229
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/index.f4a9c.js",
+      "status": 200,
+      "resourceType": "JavaScript",
+      "size": 562200,
+      "time": 1761563881179,
+      "timing": {
+        "requestTime": 36876.632347,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.337,
+        "sendEnd": 0.37,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 343.388,
+        "receiveHeadersEnd": 343.44
+      },
+      "mimeType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/import/09/0967b326a.1f618.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 8205,
+      "time": 1761563885045,
+      "timing": {
+        "requestTime": 36877.675649,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.416,
+        "sendEnd": 0.511,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 3775.454,
+        "receiveHeadersEnd": 3775.527
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/internal/native/02/0275e94c-56a7-410f-bd1a-fc7483f7d14a.cea68.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 82,
+      "time": 1761563885338,
+      "timing": {
+        "requestTime": 36881.469983,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.382,
+        "sendEnd": 0.487,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 272.961,
+        "receiveHeadersEnd": 273.025
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/main/import/72/72e22729-6c0b-40a9-a636-b51862a2aac9.fe170.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 691,
+      "time": 1761563885580,
+      "timing": {
+        "requestTime": 36881.749929,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.273,
+        "sendEnd": 0.349,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 236.694,
+        "receiveHeadersEnd": 236.825
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/f0/f02bee4e-cc6d-411d-825f-a14d5db90426.51938.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 165,
+      "time": 1761563885850,
+      "timing": {
+        "requestTime": 36881.990133,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 2.556,
+        "sendEnd": 2.656,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 266.512,
+        "receiveHeadersEnd": 266.575
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/0e/0ea5c423c.013bd.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 86,
+      "time": 1761563886108,
+      "timing": {
+        "requestTime": 36882.258127,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.269,
+        "sendEnd": 0.346,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 256.873,
+        "receiveHeadersEnd": 256.943
+      },
+      "mimeType": "application/json"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/native/d0/d0f137a1-59a2-4fc0-8457-a8e3c354f9fb.00afa.png",
+      "status": 200,
+      "resourceType": "Image",
+      "size": 74447,
+      "time": 1761563886358,
+      "timing": {
+        "requestTime": 36882.519569,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.264,
+        "sendEnd": 0.336,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 245.332,
+        "receiveHeadersEnd": 245.388
+      },
+      "mimeType": "image/png"
+    },
+    {
+      "url": "https://hash.shuangzi6688.com/StandAloneDice/assets/resources/import/0d/0dd26a93c.e1fe0.json",
+      "status": 200,
+      "resourceType": "JSON",
+      "size": 730,
+      "time": 1761563886823,
+      "timing": {
+        "requestTime": 36882.853361,
+        "proxyStart": -1,
+        "proxyEnd": -1,
+        "dnsStart": -1,
+        "dnsEnd": -1,
+        "connectStart": -1,
+        "connectEnd": -1,
+        "sslStart": -1,
+        "sslEnd": -1,
+        "workerStart": -1,
+        "workerReady": -1,
+        "workerFetchStart": -1,
+        "workerRespondWithSettled": -1,
+        "sendStart": 0.36,
+        "sendEnd": 0.459,
+        "pushStart": 0,
+        "pushEnd": 0,
+        "receiveHeadersStart": 376.217,
+        "receiveHeadersEnd": 376.282
+      },
+      "mimeType": "application/json"
+    }
+  ]
+}
