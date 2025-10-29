@@ -1,2 +1,0 @@
-MultiPlayerAviator|9950|9196979|105
-MultiPlayerAviator2|10325|5390669|109

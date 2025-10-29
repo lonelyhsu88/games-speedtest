@@ -173,9 +173,14 @@ async function testGameLoading(gameUrl, options = {}) {
         });
 
         client.on('Network.loadingFailed', event => {
+            const request = requestIdMap.get(event.requestId);
             failedRequests.push({
-                url: event.documentURL || 'unknown',
+                url: request ? request.url : event.documentURL || 'unknown',
+                requestId: event.requestId,
                 error: event.errorText,
+                type: event.type,
+                canceled: event.canceled || false,
+                blockedReason: event.blockedReason || null,
                 time: Date.now()
             });
         });
