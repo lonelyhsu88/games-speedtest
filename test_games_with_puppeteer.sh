@@ -10,7 +10,7 @@
 # 4. Reports accurate loading times and resource sizes
 #
 # Usage:
-#   ./test_games_with_puppeteer.sh [num_games] [lang] [wait_time]
+#   ./test_games_with_puppeteer.sh <num_games> [lang] [wait_time]
 #   ./test_games_with_puppeteer.sh --games "Game1,Game2,Game3" [lang] [wait_time]
 #
 # Examples:
@@ -34,14 +34,64 @@ API_URL="https://wallet-api.geminiservice.cc/api/v1/operator/game/launch"
 USERNAME="optest01"
 PRODUCT_ID="ELS"
 
+# Show usage function
+show_usage() {
+    echo -e "${RED}Error: Missing required parameter${NC}"
+    echo ""
+    echo -e "${YELLOW}Usage:${NC}"
+    echo "  $0 <num_games> [lang] [wait_time]"
+    echo "  $0 --games \"Game1,Game2,Game3\" [lang] [wait_time]"
+    echo ""
+    echo -e "${YELLOW}Examples:${NC}"
+    echo "  $0 3              # Test 3 random games (default lang: en-US, wait: 10000ms)"
+    echo "  $0 5 zh-CN        # Test 5 random games with Chinese language"
+    echo "  $0 10 en-US 15000 # Test 10 random games with custom wait time"
+    echo "  $0 --games \"StandAloneHilo,StandAloneLimbo\" en-US"
+    echo ""
+    echo -e "${YELLOW}Parameters:${NC}"
+    echo "  num_games  : Number of games to test (1-54)"
+    echo "  lang       : Language code (default: en-US)"
+    echo "  wait_time  : Wait time after networkidle in ms (default: 10000)"
+    echo ""
+    exit 1
+}
+
 # Parse arguments
 SPECIFIED_GAMES=""
 if [ "$1" = "--games" ]; then
+    if [ -z "$2" ]; then
+        echo -e "${RED}Error: --games requires a game list${NC}"
+        echo ""
+        show_usage
+    fi
     SPECIFIED_GAMES="$2"
     LANG=${3:-"en-US"}
     WAIT_TIME=${4:-10000}
 else
-    NUM_GAMES=${1:-3}
+    # Check if num_games parameter is provided
+    if [ $# -eq 0 ]; then
+        show_usage
+    fi
+
+    NUM_GAMES=$1
+
+    # Validate num_games is a positive integer
+    if ! [[ "$NUM_GAMES" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}Error: Number of games must be a positive integer${NC}"
+        echo ""
+        show_usage
+    fi
+
+    if [ "$NUM_GAMES" -lt 1 ]; then
+        echo -e "${RED}Error: Number of games must be at least 1${NC}"
+        exit 1
+    fi
+
+    if [ "$NUM_GAMES" -gt 54 ]; then
+        echo -e "${YELLOW}Warning: Maximum 54 games available. Setting to 54.${NC}"
+        NUM_GAMES=54
+    fi
+
     LANG=${2:-"en-US"}
     WAIT_TIME=${3:-10000}
 fi
