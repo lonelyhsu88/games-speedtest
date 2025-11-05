@@ -168,7 +168,12 @@ get_game_url() {
     local game=$1
     local seq=$(generate_seq)
     local payload="{\"seq\":\"$seq\",\"product_id\":\"$PRODUCT_ID\",\"username\":\"$USERNAME\",\"gametype\":\"$game\",\"lang\":\"$LANG\"}"
-    local md5=$(echo -n "xdr56yhn${payload}" | md5 -q)
+    # Compatible with both macOS (md5) and Linux (md5sum)
+    if command -v md5 &> /dev/null; then
+        local md5=$(echo -n "xdr56yhn${payload}" | md5 -q)
+    else
+        local md5=$(echo -n "xdr56yhn${payload}" | md5sum | awk '{print $1}')
+    fi
 
     local response=$(curl -s -X POST "$API_URL" \
       -H "Content-Type: application/json" \

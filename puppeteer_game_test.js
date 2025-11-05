@@ -279,7 +279,8 @@ async function testGameLoading(gameUrl, options = {}) {
 
                 const newResourceCount = responses.length - beforeClickRequests;
 
-                if (newResourceCount > 5) {
+                // ✅ 修復: 降低閾值從 5 到 2，適應輕量級遊戲
+                if (newResourceCount > 2) {
                     console.log(`    ${colors.green}✓${colors.reset} Success! ${newResourceCount} new resources detected`);
                     clickSuccessful = true;
                     successInfo = { strategy: 'multi-position', position: pos.name, resources: newResourceCount };
@@ -318,7 +319,8 @@ async function testGameLoading(gameUrl, options = {}) {
 
                 const newResourceCount = responses.length - beforeClickRequests;
 
-                if (newResourceCount > 5) {
+                // ✅ 修復: 降低閾值從 5 到 2，適應輕量級遊戲
+                if (newResourceCount > 2) {
                     console.log(`    ${colors.green}✓${colors.reset} Success! ${newResourceCount} new resources detected`);
                     clickSuccessful = true;
                     successInfo = { strategy: 'rapid-clicks', resources: newResourceCount };
@@ -425,8 +427,10 @@ async function testGameLoading(gameUrl, options = {}) {
             const idleTime = Date.now() - lastRequestTime;
             const elapsed = Date.now() - startWaitTime;
 
-            // Check if ready (at least 15s elapsed AND 5s idle)
-            if (elapsed >= 15000 && idleTime >= idleThreshold && responses.length > 20) {
+            // ✅ 修復: 降低閾值以支持小型遊戲
+            // 舊: elapsed >= 15000 && responses.length > 20
+            // 新: elapsed >= 10000 && responses.length > 5
+            if (elapsed >= 10000 && idleTime >= idleThreshold && responses.length > 5) {
                 console.log('');
                 console.log(`  ${colors.yellow}Network idle detected, verifying...${colors.reset}`);
 
